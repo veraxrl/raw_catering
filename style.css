@@ -1,0 +1,20 @@
+.top {
+	background-color: black;
+	height: 20px;
+	color:white;
+	font-family: Arial, Arial, Helvetica, sans-serif;
+}
+.logo-col {
+	border:2px solid red;
+}
+.box {
+	border: 2px solid black;
+}
+.logo img {
+	width: 150px;
+	height: 100px;
+}
+.social-bar {
+	height: 50px;
+	margin-top: 20px;
+}

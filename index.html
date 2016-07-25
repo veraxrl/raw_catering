@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+        <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One|Vollkorn|Exo|Monofett' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Dosis|Josefin+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cinzel:400,900' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="/style.css">
+    <title>Raw Catering Website</title>
+  </head>
+
+  <body ng-app="rawApp">
+
+    <div class="container-fluid" ng-view></div>
+
+    <script src="angular.js"></script>
+    <script src="angular-route.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.0.3/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+    <script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyA3UeJgpYj0XrXlImnGf6WCLO9NevUEnoc",
+	    authDomain: "musci-ee4b3.firebaseapp.com",
+	    databaseURL: "https://musci-ee4b3.firebaseio.com",
+	    storageBucket: "musci-ee4b3.appspot.com",
+	  };
+	  firebase.initializeApp(config);
+	</script>
+    <script src="https://api.soundcloud.com/tracks?client_id=eb60efff116075efdaa769b3eec7a5f8"></script>
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+    
+    <!-- Include YT library and this directive -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="angular-youtube-embed.js"></script>
+
+    <script src="script.js"></script>
+  
+  </body> 
+</html>
