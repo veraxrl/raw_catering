@@ -30,6 +30,9 @@ app.controller('mainCtrl', function($scope, $routeParams, $firebaseObject, $fire
     }
     
     $scope.showDivs($scope.slideIndex);
+
+    var mission = document.getElementById("to-mission");
+    var team = document.getElementById("to-team");
     
     mission.onclick = function() {
         console.log("mission");
