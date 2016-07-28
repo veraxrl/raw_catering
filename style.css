@@ -140,7 +140,7 @@
 }
 .member {
 	position:relative;
-	height: 200px;
+	height: 270px;
 	border: 1px solid black;
 	background-repeat: no-repeat;
 	background-size: 100% auto;
@@ -167,12 +167,18 @@
 }
 .gallery {
 	background-color: black;
-	height: 400px;
+	height: 600px;
 	color:white;
 	font-family: 'Lobster', cursive;
+}
+.gallery h2 {
+	margin:50px 0;
 }
 .pic2 img {
 	width: 120px;
 	height: 120px;
 	margin: 15px 10px;
+}
+.services {
+	height: 600px;
 }
