@@ -11,20 +11,31 @@ app.config(function($routeProvider) {
 });
 
 app.controller('mainCtrl', function($scope, $routeParams, $firebaseObject, $firebaseAuth) {
-    $scope.authObj = $firebaseAuth();
 
-    $scope.login = function() {
-        console.log($scope.email);
-        console.log($scope.password);
+    $scope.slideIndex = 1;
 
-        $scope.authObj.$signInWithEmailAndPassword($scope.email, $scope.password)
-        .then(function(firebaseUser) {
-            console.log("Signed in as:", firebaseUser.uid);
-            window.location.assign('http://localhost:8000/#/users/'+firebaseUser.uid);
-
-        }).catch(function(error) {
-             console.error("Authentication failed:", error);
-        })
-
+    $scope.plusDivs = function(n) {
+        $scope.showDivs($scope.slideIndex += n);
     }
+
+    $scope.showDivs= function(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {$scope.slideIndex = 1} 
+        if (n < 1) {$scope.slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none"; 
+        }
+        x[$scope.slideIndex-1].style.display = "block"; 
+    }
+    
+    $scope.showDivs($scope.slideIndex);
+    
+    mission.onclick = function() {
+        console.log("mission");
+    }
+    team.onclick = function() {
+        console.log("team");
+    }
+
 });

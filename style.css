@@ -1,20 +1,178 @@
+* {
+	text-align: center;
+}
+
 .top {
 	background-color: black;
 	height: 20px;
 	color:white;
 	font-family: Arial, Arial, Helvetica, sans-serif;
 }
-.logo-col {
-	border:2px solid red;
+.top div {
+	margin:2px 2px 0 10px;
+	display: inline-block
 }
-.box {
-	border: 2px solid black;
+.logo-col {
+	background-image: url("https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/13612246_583634088464856_4087611845256450321_n.jpg?oh=a9f48bcdad9edef8968bbdda23423060&oe=5817AF9D");
+	background-repeat: no-repeat;
 }
 .logo img {
+	margin: 10px;
 	width: 150px;
-	height: 100px;
+	height: 150px;
+	border-radius: 100%;
+	border: 4px solid black;
 }
 .social-bar {
 	height: 50px;
-	margin-top: 20px;
+}
+.social-item {
+	width: 30px;
+	height: 30px;
+	margin: 10px 10px;
+}
+.nav-bar {
+	height: 50px;
+	background-color: black;
+}
+.nav-item {
+	background:black;
+	padding: 10px;
+	color:white;
+	border:1px solid black;
+	font-family: 'Montserrat',sans-serif;
+	text-transform: uppercase;
+}
+.nav-item a {
+	text-decoration: none;
+	color:white;
+}
+.social-item:hover {
+	box-shadow: 0px 2px 6px white;
+	transform:translate(0,-1px);
+}
+.mySlides {
+	position: absolute;
+	left:0;
+	width: 100%;
+	height: 450px;
+	z-index: -1;
+}
+.slides-col {
+	position: relative;
+	height:450px;
+}
+.slide-right {
+	position: absolute;
+	top:50%;
+	right: 7%;
+}
+.slide-left {
+	position: absolute;
+	top:50%;
+	left:7%;
+}
+.slide-right, .slide-left {
+	color:white;
+	z-index: 1;
+	font-size: 25px;
+	opacity: 0.5;
+}
+.text-col {
+	padding: 50px;
+	background-color: black;
+	height: 450px;
+	color:white;
+	font-family: 'Lobster', cursive;
+}
+.text-col h4 {
+	margin: 50px 0;
+}
+.company {
+	position: relative;
+	background-image: url("pics/bk1.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	height:400px;
+	margin-right: -20px;
+	margin-left: -130px;
+	font-family: 'Kaushan Script', cursive;
+}
+.bg-overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: white;
+	opacity: 0.75;
+}
+.company h1 {
+	margin: 40px 0;
+}
+.company p {
+	width: 700px;
+	margin:10px auto;
+}
+.company-text {
+	margin-left: 100px;
+}
+.crew-head {
+	height: 70px;
+	background-color: black;
+	color: white;
+	font-family: 'Lobster', cursive;
+}
+.crew {
+	height: 400px;
+}
+.member1 {
+	background: url("http://pre07.deviantart.net/d84f/th/pre/f/2012/218/5/b/pikachu_hd_by_alexdj94-d5a0dau.png");
+}
+.member2 {
+	background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx2cIbyekb8xlu84XXSP_Cx0F3EVbQhl-ma1lkBL6lKOhn0Orn");
+}
+.member3 {
+	background: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQhjWDk4hZn9re-85VfOVXf8wkokhrtpC6x2GjfriuJrIIPGEXs");
+}
+.member4 {
+	background: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSdVO3SkknLre6lVY8_kBaR-Gst7DLuHQKXeSw58xhB_iMY5BC2Jw");
+}
+.member {
+	position:relative;
+	height: 200px;
+	border: 1px solid black;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+}
+.member .bg-overlay {
+	z-index: 1;
+	color: black;
+	font-family: 'Lobster', cursive;
+	padding-top: 25px;
+}
+.member-intro {
+	display: none;
+}
+.member:hover .member-intro{
+	display: block;
+}
+.member p {
+	width: 70%;
+	margin:10px auto;
+}
+.icon {
+	font-size: 40px;
+	margin-top: 15px;
+}
+.gallery {
+	background-color: black;
+	height: 400px;
+	color:white;
+	font-family: 'Lobster', cursive;
+}
+.pic2 img {
+	width: 120px;
+	height: 120px;
+	margin: 15px 10px;
 }
