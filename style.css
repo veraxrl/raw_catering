@@ -1,20 +1,24 @@
 * {
 	text-align: center;
 }
-
 .top {
 	background-color: black;
 	height: 20px;
 	color:white;
 	font-family: Arial, Arial, Helvetica, sans-serif;
+	text-align: left;
+	font-size:12px;
 }
 .top div {
 	margin:2px 2px 0 10px;
-	display: inline-block
+	display: inline-block;
+}
+#right {
+	float:right;
 }
 .logo-col {
-	background-image: url("https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/13612246_583634088464856_4087611845256450321_n.jpg?oh=a9f48bcdad9edef8968bbdda23423060&oe=5817AF9D");
-	background-repeat: no-repeat;
+	background-image: url("pics/header.jpg");
+	background-size: 100% auto;
 }
 .logo img {
 	margin: 10px;
@@ -96,7 +100,7 @@
 	height:400px;
 	margin-right: -20px;
 	margin-left: -130px;
-	font-family: 'Kaushan Script', cursive;
+	font-family: 'Lobster', cursive;
 }
 .bg-overlay {
 	position: absolute;
@@ -107,12 +111,23 @@
 	background-color: white;
 	opacity: 0.75;
 }
+/*.black-bg-overlay {
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: black;
+	opacity: 0.3;
+	z-index: 1;
+}*/
 .company h1 {
 	margin: 40px 0;
 }
 .company p {
-	width: 700px;
-	margin:10px auto;
+	width: 1000px;
+	margin:40px auto;
+	font-size:20px;
 }
 .company-text {
 	margin-left: 100px;
@@ -168,17 +183,111 @@
 .gallery {
 	background-color: black;
 	height: 600px;
-	color:white;
+	color: white;
 	font-family: 'Lobster', cursive;
 }
 .gallery h2 {
 	margin:50px 0;
+} 
+.gallery-pic {
+	margin:0px 100px;
+	height: 300px;
 }
 .pic2 img {
-	width: 120px;
-	height: 120px;
-	margin: 15px 10px;
+	width: 150px;
+	height: 150px;
+	z-index: 1;
+}
+.pic2 {
+	float:left;
+	width: 150px;
+	height: 150px;
+	margin:10px 10px;
+	position: relative;
+}
+.pic2-stats {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	color: white;
+	z-index: 2;
+	display: none;
+}
+.pic2-stats span {
+	margin:10px 15px;
+}
+.pic2:hover {
+	transform:scale(0.9);
+}
+.pic2:hover .pic2-stats{
+	background-color: rgba(0, 0, 0, 0.3);
+	display: block;
 }
 .services {
-	height: 600px;
+	height: 530px;
+	position: relative;
+	background: url("pics/bk3.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+}
+.service-btn {
+	margin-top: 250px;
+	width: 200px;
+	height: 100px;
+	padding: 13px 10px;
+    font-weight: 400;
+    font-size: 25px;
+    color: white;
+    border: 3px solid white;
+    font-family: 'Lobster', cursive;
+}
+.slide1 {
+	background: url("http://chezmichel-poitiers.com/wp-content/uploads/2014/12/cocktail-chez-michel-poitiers.jpg");
+}
+.slide2 {
+	background: url("http://chezmichel-poitiers.com/wp-content/uploads/2014/12/vin1.jpg");
+}
+.slide3 {
+	background: url("http://chezmichel-poitiers.com/wp-content/uploads/2014/12/cheesecake-chez-michel-poitiers.jpg");
+}
+.slide {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 1;
+	background-repeat: no-repeat;
+	background-size: 100% auto;	
+	transform: translate(-1800px,0);
+}
+.slide-overlay1 {
+	color:#f54200;
+}
+.slide-overlay2 {
+	color:black;
+}
+.slide-overlay3 {
+	color:red;
+}
+.slide-overlay {
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	width: 50%;
+	z-index: 2; 
+	background-color:white;
+	opacity: 0.8;
+	font-family: Oswald;
+	transform: translate(-1800px,0);
+}
+.isVisible {
+	transform: translate(0px,0);
+	transition: all .3s;
+}
+.pop-control {
+	z-index: 10;
 }

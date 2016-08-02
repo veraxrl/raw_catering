@@ -1,4 +1,5 @@
-var app = angular.module('rawApp', ["ngRoute","firebase","youtube-embed"]); 
+var app = angular.module('rawApp', ["ngRoute","firebase"]); 
+var INSTA_API_BASE_URL = "https://api.instagram.com/v1";
 
 app.config(function($routeProvider) {
 	$routeProvider.when('/', {
@@ -13,7 +14,7 @@ app.config(function($routeProvider) {
     })                                   
 });
 
-app.controller('mainCtrl', function($scope, $routeParams, $firebaseObject, $firebaseAuth) {
+app.controller('mainCtrl', function($scope, $http, $routeParams, $firebaseObject, $firebaseAuth) {
 
     $scope.slideIndex = 1;
 
@@ -38,6 +39,16 @@ app.controller('mainCtrl', function($scope, $routeParams, $firebaseObject, $fire
     var team = document.getElementById("to-team");
     var gallery = document.getElementById("to-gallery");
     var service = document.getElementById("to-service");
+    var slide1 = document.getElementById("slide1-btn");
+    var slide2 = document.getElementById("slide2-btn");
+    var slide3 = document.getElementById("slide3-btn");
+
+    var header1 = document.getElementById("slide1");
+    var header2 = document.getElementById("slide2");
+    var header3 = document.getElementById("slide3");
+    var shadow1 = document.getElementById("slide-overlay1");
+    var shadow2 = document.getElementById("slide-overlay2");
+    var shadow3 = document.getElementById("slide-overlay3");
     
     mission.onclick = function() {
         console.log("mission");
@@ -53,6 +64,49 @@ app.controller('mainCtrl', function($scope, $routeParams, $firebaseObject, $fire
     service.onclick = function() {
         document.body.scrollTop=1420;
     }
+
+    slide1.onclick = function() {
+        header1.classList.add('isVisible');
+        shadow1.classList.add('isVisible');
+    };
+    slide2.onclick = function() {
+        header2.classList.add('isVisible');
+        shadow2.classList.add('isVisible');
+    }
+    slide3.onclick = function() {
+        header3.classList.add('isVisible');
+        shadow3.classList.add('isVisible');
+    }
+
+    //Instagram feed: 
+      $scope.hasToken = true;
+        var token = window.location.hash;
+        console.log(token);
+      if (!token) {
+        $scope.hasToken = false;
+      }
+      token = token.split("=")[1];
+
+      $scope.getInstaPics = function() {
+          var path = "/users/self/media/recent";
+          var mediaUrl = INSTA_API_BASE_URL + path;
+          $http({
+            method: "JSONP",
+            url: mediaUrl,
+            params: {
+                callback: "JSON_CALLBACK",
+                access_token:"244365755.655f99b.51434ba0588f4f968e556a6a0eda9025"
+            }
+        }).then(function(response) {
+          $scope.picArray = response.data.data.slice(0,8);
+          console.log(response);
+          // now analyze the sentiments and do some other analysis
+          // on your images
+
+      })
+    };
+
+    $scope.getInstaPics();
 
 });
 

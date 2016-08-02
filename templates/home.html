@@ -1,6 +1,18 @@
 <div class="row top">
-	<div class="glyphicon glyphicon-earphone" aria-hidden="true"></div>
-	<div>+27 72 080 1189</div>
+	<div class="glyphicon glyphicon-earphone left" aria-hidden="true"></div>
+	<div class="left">Trent Devine: 072 080 1189</div>
+	<div class="left">Tyrone Kidney: 083 482 7642 </div>
+	<div id="right">Address: Unit 003 Portwood Ridge, Dock Road, V&A Waterfront.</div>
+</div>
+
+<div class="row">
+	<div class="login-btn btn" ng-hide="hasToken" ng-click="getInstaPics()">
+		<a href="https://api.instagram.com/oauth/authorize/?client_id= 655f99b4d65d4217a413e6e601ad5b4a&redirect_uri=http://localhost:8000&response_type=token" class="btn btn-info btn-lg btn-block">
+			<i class="fa fa-instagram"></i>
+			Log in with Instagram
+		</a>
+	</div>
+
 </div>
 
 <div class="row logo-col">
@@ -81,12 +93,10 @@
 <div class="company row">
 	<div class="bg-overlay">
 		<div class="company-text">
-			<h1>HUMBLE CATERING BEGINNINGS </h1>
-			<h3>Cape Town created the passion and so things grew...</h3>
-			<p>RAW Catering Co. was conceptualized in Cape Town many years ago but it was not until our Director, Trenton Devine, returned home from overseas that we saw the catering potential in the local Cape Town market.
-	 		As a start-up company we saw a niche in the market for healthy catering and more specifically healthy contract catering for office canteens and outsourced healthy business catering. We are a Catering Co. that services the needs of business staff during the day and strive to create a canteen menu in business establishments that leaves staff feeling energized and upbeat after every meal.</p>
-	 		<p>We use our knowledge of produce and the expertise of our team of talented chefs as we also service the needs for upmarket private functions and events catering.
-	 		We are committed to healthy food and quality ingredients as we supply our clients with onsite and events options that supply them with the variety they deserve in maintaining a healthy lifestyle whilst experiencing a touch of finess.</p>
+			<h1>Our Mission </h1>
+			<h3>Feeding People Nutritiously</h3>
+			<h3>Empowering People Respectfully</h3>
+			<p>We maintain professionalism in everything we do, continue to grow and expand to meet the demands of our customers, excel through industry leadership & trends, be competitive, surpass expectations, and develop long-lasting relationships with suppliers and customers to sustain growth.</p>
  		</div>
 	</div>
 </div>
@@ -124,67 +134,85 @@
 </div>
 
 <div class="services row">
-	
+	<div class="black-bg-overlay">
+		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 service-btn" id="slide1-btn">Canapés</div>
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 service-btn" id="slide2-btn">Bowl Food (Hot, Cold, Dessert)</div>
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 service-btn" id="slide3-btn">Corporate Catering</div>
+	</div>
+
+	<div class="slide1 slide" id="slide1"></div>
+	<div class="slide2 slide" id="slide2"></div>
+	<div class="slide3 slide" id="slide3"></div>
+
+	<div class="slide-overlay1 slide-overlay" id="slide-overlay1">
+		<h1>MENU1</h1>
+		<p>Here is a sample menu that will pop up when I click on canapres.</p>
+	</div>
+	<div class="slide-overlay2 slide-overlay" id="slide-overlay2">
+		<h1>MENU2</h1>
+		<p>Here is a sample menu that will pop up when I click on bowl food.</p>
+	</div>
+	<div class="slide-overlay3 slide-overlay" id="slide-overlay3">
+		<h1>MENU3</h1>
+		<p>Here is a sample menu that will pop up when I click on corporate catering.</p>
+	</div>
+
 </div>
 
 <div class="row gallery">
 	<h2>The Gallery</h2>
 
-	<div class=row gallery-pic>
-		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pic2">
+	<!-- <div class="row gallery-pic">
+		<div class="pic2">
 			<img src="pics/gallery1.jpg">
 		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pic2">
+		<div class="pic2">
 			<img src="https://static.wixstatic.com/media/8ee889fef1f05a9ddd91a3d0eb54e017.jpg/v1/fill/w_161,h_161,al_c,q_80,usm_0.66_1.00_0.01/8ee889fef1f05a9ddd91a3d0eb54e017.jpg">
 		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pic2">
+		<div class="pic2">
 			<img src="https://static.wixstatic.com/media/25f9e7b5ee37f06ea1f94fa331dd2623.jpg/v1/fill/w_161,h_161,al_c,q_80,usm_0.66_1.00_0.01/25f9e7b5ee37f06ea1f94fa331dd2623.jpg">
 		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pic2">
+		<div class="pic2">
 			<img src="https://static.wixstatic.com/media/214ec6_6c48170fbf65a657cf295acc70d8ec86.jpg/v1/fill/w_161,h_161,al_c,q_80,usm_0.66_1.00_0.01/214ec6_6c48170fbf65a657cf295acc70d8ec86.jpg">
 		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pic2">
+		<div class="pic2">
 			<img src="https://static.wixstatic.com/media/c888c45102354f4eb4666bf3d673529f.jpg/v1/fill/w_161,h_161,al_c,q_80,usm_0.66_1.00_0.01/c888c45102354f4eb4666bf3d673529f.jpg">
 		</div>
-	</div>
 
-	<div class=row gallery-pic>
-		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pic2">
+		<div class="pic2">
 			<img src="https://static.wixstatic.com/media/edd67875ef8b46efbfe8adb4d26bdaba.jpg/v1/fill/w_485,h_774,al_c,q_90,usm_0.66_1.00_0.01/edd67875ef8b46efbfe8adb4d26bdaba.jpg">
 		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pic2">
+		<div class="pic2">
 			<img src="pics/gallery3.jpg">
 		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pic2">
+		<div class="pic2">
 			<img src="pics/gallery4.jpg">
 		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pic2">
+		<div class="pic2">
 			<img src="https://scontent.xx.fbcdn.net/v/t1.0-9/12227824_487515098076756_2864991047451310094_n.jpg?oh=0a82dd76f962e93c352efee4d6179d3f&oe=58233E64">
 		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pic2">
+		<div class="pic2">
 			<img src="https://scontent.xx.fbcdn.net/v/t1.0-9/12208501_486327061528893_7515405438734719751_n.jpg?oh=193dfe7a8871d6b1ac3b7d767da25d44&oe=581C4C37">
 		</div>
-	</div>
 
-	<div class=row gallery-pic>
-		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pic2">
-			<img src="https://static.wixstatic.com/media/edd67875ef8b46efbfe8adb4d26bdaba.jpg/v1/fill/w_485,h_774,al_c,q_90,usm_0.66_1.00_0.01/edd67875ef8b46efbfe8adb4d26bdaba.jpg">
-		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pic2">
-			<img src="pics/gallery3.jpg">
-		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pic2">
-			<img src="pics/gallery4.jpg">
-		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pic2">
-			<img src="https://scontent.xx.fbcdn.net/v/t1.0-9/12227824_487515098076756_2864991047451310094_n.jpg?oh=0a82dd76f962e93c352efee4d6179d3f&oe=58233E64">
-		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pic2">
-			<img src="https://scontent.xx.fbcdn.net/v/t1.0-9/12208501_486327061528893_7515405438734719751_n.jpg?oh=193dfe7a8871d6b1ac3b7d767da25d44&oe=581C4C37">
-		</div>
+	</div> -->
+
+	<div class="row gallery-pic">
+		<ul style="list-style:none;">
+			<li ng-repeat="pic in picArray track by $index">
+				<div class="pic2">
+					<img src="{{pic.images.standard_resolution.url}}">
+					<div class="pic2-stats">
+						<span class="glyphicon glyphicon glyphicon-heart-empty" aria-hidden="true"><span style="font-family:'Lobster'" >{{pic.likes.count}}</span></span>
+						<span class="glyphicon glyphicon glyphicon-comment" aria-hidden="true"><span style="font-family:'Lobster'" >{{pic.comments.count}}</span></span>
+						<p>{{pic.caption.text}}</p>
+					</div>
+				</div>
+			</li>
+		</ul>
 	</div>
 
 </div>
