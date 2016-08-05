@@ -1,6 +1,9 @@
 * {
 	text-align: center;
 }
+body {
+	background-color: #fff;
+}
 .top {
 	background-color: black;
 	height: 20px;
@@ -19,11 +22,22 @@
 .logo-col {
 	background-image: url("pics/header.jpg");
 	background-size: 100% auto;
+	height: 160px;
+	position: relative;
+}
+.logo-col .bg-overlay {
+	opacity: 0.2;
+	background-color:black;
+}
+.logo {
+	position: absolute;
+	z-index: 2;
+	left: 43%;
 }
 .logo img {
 	margin: 10px;
 	width: 150px;
-	height: 150px;
+	height: 140px;
 	border-radius: 100%;
 	border: 4px solid black;
 }
@@ -32,7 +46,7 @@
 }
 .social-item {
 	width: 30px;
-	height: 30px;
+	height: 40px;
 	margin: 10px 10px;
 }
 .nav-bar {
@@ -43,7 +57,6 @@
 	background:black;
 	padding: 10px;
 	color:white;
-	border:1px solid black;
 	font-family: 'Montserrat',sans-serif;
 	text-transform: uppercase;
 }
@@ -59,12 +72,12 @@
 	position: absolute;
 	left:0;
 	width: 100%;
-	height: 450px;
+	height: 400px;
 	z-index: -1;
 }
 .slides-col {
 	position: relative;
-	height:450px;
+	height:400px;
 }
 .slide-right {
 	position: absolute;
@@ -85,7 +98,7 @@
 .text-col {
 	padding: 50px;
 	background-color: black;
-	height: 450px;
+	height: 400px;
 	color:white;
 	font-family: 'Lobster', cursive;
 }
@@ -94,12 +107,10 @@
 }
 .company {
 	position: relative;
-	background-image: url("pics/bk1.jpg");
+	background-image: url("pics/mission.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 	height:400px;
-	margin-right: -20px;
-	margin-left: -130px;
 	font-family: 'Lobster', cursive;
 }
 .bg-overlay {
@@ -111,35 +122,19 @@
 	background-color: white;
 	opacity: 0.75;
 }
-/*.black-bg-overlay {
-	position: absolute;
-	top:0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background-color: black;
-	opacity: 0.3;
-	z-index: 1;
-}*/
 .company h1 {
 	margin: 40px 0;
 }
 .company p {
-	width: 1000px;
+	width: 800px;
 	margin:40px auto;
 	font-size:20px;
-}
-.company-text {
-	margin-left: 100px;
 }
 .crew-head {
 	height: 70px;
 	background-color: black;
 	color: white;
 	font-family: 'Lobster', cursive;
-}
-.crew {
-	height: 400px;
 }
 .member1 {
 	background: url("http://pre07.deviantart.net/d84f/th/pre/f/2012/218/5/b/pikachu_hd_by_alexdj94-d5a0dau.png");
@@ -148,10 +143,7 @@
 	background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx2cIbyekb8xlu84XXSP_Cx0F3EVbQhl-ma1lkBL6lKOhn0Orn");
 }
 .member3 {
-	background: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQhjWDk4hZn9re-85VfOVXf8wkokhrtpC6x2GjfriuJrIIPGEXs");
-}
-.member4 {
-	background: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSdVO3SkknLre6lVY8_kBaR-Gst7DLuHQKXeSw58xhB_iMY5BC2Jw");
+	background: url("pics/staff.jpg");
 }
 .member {
 	position:relative;
@@ -184,26 +176,28 @@
 	background-color: black;
 	height: 600px;
 	color: white;
-	font-family: 'Lobster', cursive;
 }
 .gallery h2 {
-	margin:50px 0;
+	margin:30px 0;
+	font-family: 'Lobster', cursive;
 } 
 .gallery-pic {
 	margin:0px 100px;
-	height: 300px;
+}
+.pic2 {
+	width: 150px;
+	height: 150px;
+	position: relative;
 }
 .pic2 img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
 	width: 150px;
 	height: 150px;
 	z-index: 1;
-}
-.pic2 {
-	float:left;
-	width: 150px;
-	height: 150px;
-	margin:10px 10px;
-	position: relative;
 }
 .pic2-stats {
 	position: absolute;
@@ -214,27 +208,27 @@
 	color: white;
 	z-index: 2;
 	display: none;
+	font-size:10px;
 }
 .pic2-stats span {
-	margin:10px 15px;
+	margin:10px 10px;
 }
 .pic2:hover {
-	transform:scale(0.9);
+	transform:scale(0.95);
 }
 .pic2:hover .pic2-stats{
 	background-color: rgba(0, 0, 0, 0.3);
 	display: block;
 }
 .services {
-	height: 530px;
 	position: relative;
 	background: url("pics/bk3.jpg");
-	background-repeat: no-repeat;
 	background-size: 100% auto;
 }
 .service-btn {
-	margin-top: 250px;
+	float:left;
 	width: 200px;
+	margin:150px 60px 150px 60px;
 	height: 100px;
 	padding: 13px 10px;
     font-weight: 400;
@@ -242,6 +236,9 @@
     color: white;
     border: 3px solid white;
     font-family: 'Lobster', cursive;
+}
+.service-btn:first-child {
+	margin-left: 100px;
 }
 .slide1 {
 	background: url("http://chezmichel-poitiers.com/wp-content/uploads/2014/12/cocktail-chez-michel-poitiers.jpg");
@@ -290,4 +287,143 @@
 }
 .pop-control {
 	z-index: 10;
+}
+
+/*APIs:*/
+.apis {
+	height: 600px;
+	border: 2px solid black;
+}
+.map {
+	height: 600px;
+	border: 2px solid #00BFA5;
+	background-color: #A7FFEB;
+}
+.fb {
+	height: 600px;
+	border: 2px solid #00BFA5;
+	background-color: #64FFDA;	
+}
+
+/*Media Query:*/ 
+.invisible-address {
+	display: none;
+}
+.nav-icon {
+	display: none;
+}
+@media (max-width: 750px) {
+	#right {
+		display: none;
+	}	
+	.invisible-address {
+		display: block;
+	}
+}
+@media (max-width: 370px) {
+	.top {
+		font-size:10px;
+	}
+	.nav-bar {
+		display: none;
+	}
+	.invisible-address {
+		display: none;
+	}
+	.nav-icon {
+		position: absolute;
+		display: block;
+		top: 20px;
+		left: 10px;
+		color:white;
+		font-family: 'Montserrat',sans-serif; 
+	}
+}
+@media (max-width: 980px) {
+	.service-btn {
+		margin-top: 100px;
+		margin-bottom: 50px;
+	}
+	.service-btn:nth-child(3) {
+		margin-top: 0px;
+		margin-left: 250px;
+	}
+}
+@media (max-width: 660px) {
+	.service-btn {
+		margin: 50px 0px 0px 100px;
+		font-size:20px;
+		height: 40px;
+		width: 250px;
+		padding: 2px;
+	}
+	.service-btn:nth-child(3) {
+		margin: 50px 0px 50px 100px;
+	}
+	.service-btn:first-child {
+		margin-left:100px;
+	}
+}
+@media (max-width: 550px) {
+	.service-btn {
+		border: 0px;
+	}
+}
+@media (max-width: 800px) {
+	.logo-col {
+		background: url("pics/header2.jpg");
+		background-size: 100% auto;
+	}
+	.company p {
+		width: 600px;
+	}
+	.company {
+		background-image: url("pics/mission.jpg");
+	}
+}
+@media (max-width: 600px) {
+	.company p {
+		width: 400px;
+		font-size:15px;
+	}
+	.company h3 {
+		display: none;
+	}
+	.company {
+		height: 250px;
+	}
+}
+@media (max-width: 500px) {
+	.company p {
+		width: 300px;
+		margin:5px auto;
+	}
+	.company h1 {
+		margin:10px 0;
+		font-size:25px;
+	}
+}
+@media (max-width: 850px) {
+	.nav-item {
+		font-size: 10px;
+	}
+	.caret {
+		display: none;
+	}
+	.nav-bar {
+		height: 40px;
+	}
+}
+@media (max-width: 1030px) {
+	.gallery {
+		height: 750px;
+	}
+}
+@media (max-width: 880px) {
+	.gallery h2 {
+		color:red;
+	}
+	.gallery {
+		height: 900px;
+	}
 }

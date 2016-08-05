@@ -1,112 +1,115 @@
-<div class="row top">
-	<div class="glyphicon glyphicon-earphone left" aria-hidden="true"></div>
-	<div class="left">Trent Devine: 072 080 1189</div>
-	<div class="left">Tyrone Kidney: 083 482 7642 </div>
-	<div id="right">Address: Unit 003 Portwood Ridge, Dock Road, V&A Waterfront.</div>
-</div>
-
-<div class="row">
-	<div class="login-btn btn" ng-hide="hasToken" ng-click="getInstaPics()">
-		<a href="https://api.instagram.com/oauth/authorize/?client_id= 655f99b4d65d4217a413e6e601ad5b4a&redirect_uri=http://localhost:8000&response_type=token" class="btn btn-info btn-lg btn-block">
-			<i class="fa fa-instagram"></i>
-			Log in with Instagram
-		</a>
+<div class="container-fluid">
+	<!-- Address and Contact Information -->
+	<div class="row top">
+		<div class="glyphicon glyphicon-earphone left" aria-hidden="true"></div>
+		<div class="left">Trent Devine: 072 080 1189</div>
+		<div class="left">Tyrone Kidney: 083 482 7642 </div>
+		<div id="right">Address: Unit 003 Portwood Ridge, Dock Road, V&A Waterfront.</div>
+	</div>
+	<div class="row top invisible-address">
+		<div id="left">Address: Unit 003 Portwood Ridge, Dock Road, V&A Waterfront.</div>
 	</div>
 
-</div>
-
-<div class="row logo-col">
-	<center>
-		<div class="row logo">
-			<img src="https://scontent.xx.fbcdn.net/v/t1.0-9/12990859_546391932189072_4012334807621871651_n.jpg?oh=140fc6708fb6f101f984a5c2263be47c&oe=5814F8CB">
+	<!-- Header with Main Logo -->
+	<div class="row logo-col">
+		<div class="bg-overlay"></div>
+		<center>
+			<div class="row logo">
+				<img src="https://scontent.xx.fbcdn.net/v/t1.0-9/12990859_546391932189072_4012334807621871651_n.jpg?oh=140fc6708fb6f101f984a5c2263be47c&oe=5814F8CB">
+			</div>
+		</center>
+		<div class="nav-icon">
+			<ul style="list-style:none;">
+				<li>Home</li>
+				<li>Company</li>
+				<li>Services</li>
+				<li>Gallery</li>
+				<li>Contact</li>
+			</ul>
 		</div>
-	</center>
-</div>
-
-<div class="row nav-bar">
-
-	<div class="dropdown col-lg-1 col-md-1 col-sm-1 col-xs-1 nav-item"></div>
-
-	<div class="dropdown col-lg-2 col-md-2 col-sm-2 col-xs-2 nav-item">
-		<a href="#/">Home</a>
 	</div>
 
-	<div class="dropdown col-lg-2 col-md-2 col-sm-2 col-xs-2">
-	  <div class="dropdown-toggle nav-item" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-	    Company
-	    <span class="caret"></span>
-	  </div>
-	  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-	    <li><a href="#/" id="to-mission">Mission</a></li>
-	    <li><a href="#/" id="to-team">Meet the team</a></li>
-	  </ul>
-	</div>
-
-	<div class="dropdown col-lg-2 col-md-2 col-sm-2 col-xs-2">
-	  <div class="dropdown-toggle nav-item" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-	   	Services
-	    <span class="caret"></span>
-	  </div>
-	  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-	    <li><a href="#/services/menus">Menus</a></li>
-	    <li><a href="#/" id="to-service">What we offer</a></li>
-	    <li><a href="#/services/clients">Clients</a></li>
-	  </ul>
-	</div>
-
-	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 nav-item" id="to-gallery">Gallery</div>
-	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 nav-item">Contact</div>
-
-</div>
-
-<div class="row">
-	<div class="slides-col col-lg-6 col-md-6 col-sm-6 col-xs-6">
-		<img class="mySlides" src="https://static.wixstatic.com/media/cf177a_2d44ce2f652e425c85e29ead4314052c.jpg/v1/fill/w_743,h_743,al_c,q_90,usm_0.66_1.00_0.01/cf177a_2d44ce2f652e425c85e29ead4314052c.jpg">
-		<img class="mySlides" src="https://static.wixstatic.com/media/cf177a_0bb30afbed0d41a9a616a63da342f9c7.jpg/v1/fill/w_743,h_743,al_c,q_90,usm_0.66_1.00_0.01/cf177a_0bb30afbed0d41a9a616a63da342f9c7.jpg">
-		<img class="mySlides" src="https://static.wixstatic.com/media/cf177a_78d0da3a23fd47279cea1c6a2be0bd2b.jpg/v1/fill/w_800,h_600,al_c,q_90/cf177a_78d0da3a23fd47279cea1c6a2be0bd2b.jpg">
-		<img class="mySlides" src="https://static.wixstatic.com/media/cf177a_5474b0c5184c4e568a31576cdbde8c85.jpg/v1/fill/w_557,h_743,al_c,q_90,usm_0.66_1.00_0.01/cf177a_5474b0c5184c4e568a31576cdbde8c85.jpg">
-		
-		<span class="glyphicon glyphicon-chevron-left slide-left" ng-click="plusDivs(-1)" aria-hidden="true"></span>
-		<span class="glyphicon glyphicon-chevron-right slide-right" ng-click="plusDivs(+1)" aria-hidden="true"></span>
-	</div>
-
-	<div class="text-col col-lg-6 col-md-6 col-sm-6 col-xs-6">
-		<h1>Our <strong>Commitment</strong></h1>
-		<h4>We are a fresh new company committed to serving the best quality, health orientated food to a growing demand of business conferences, private functions and events.</h4>
-
-		<div class="row social-bar">
-			<a href="https://www.facebook.com/RawCateringCo/">
-				<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS4rCbG68OzQhKT-hnmwJy_kYa8vak5H_GyZxTUzyOd8ElUmsXAUg" class="img-rounded social-item">
-			</a>
-			<a href="https://www.instagram.com/rawcateringco/">
-				<img src="http://assets.nydailynews.com/polopoly_fs/1.2632886.1462976353!/img/httpImage/image.jpg_gen/derivatives/article_750/instagram12n-1-web.jpg" class="img-rounded social-item">
-			</a>
-			<a href="https://twitter.com/Rawcateringco">
-				<img src="http://www.blazingcatfur.ca/wp-content/uploads/2016/02/Twitter-logo21.png" class="img-rounded social-item">
-			</a>
+	<!-- Navigation Bar -->
+	<div class="row nav-bar">
+		<div class="dropdown col-lg-1 col-md-1 col-sm-1 col-xs-1 nav-item"></div>
+		<div class="dropdown col-lg-2 col-md-2 col-sm-2 col-xs-2 nav-item">
+			<a href="#/">Home</a>
 		</div>
 
+		<div class="dropdown col-lg-2 col-md-2 col-sm-2 col-xs-2">
+		  <div class="dropdown-toggle nav-item" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+		    Company
+		    <span class="caret"></span>
+		  </div>
+		  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+		    <li><a href="#/" id="to-mission">Mission</a></li>
+		    <li><a href="#/" id="to-team">Meet the team</a></li>
+		  </ul>
+		</div>
 
+		<div class="dropdown col-lg-2 col-md-2 col-sm-2 col-xs-2">
+		  <div class="dropdown-toggle nav-item" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+		   	Services
+		    <span class="caret"></span>
+		  </div>
+		  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+		    <li><a href="#/services/menus">Menus</a></li>
+		    <li><a href="#/" id="to-service">What we offer</a></li>
+		    <li><a href="#/services/clients">Clients</a></li>
+		  </ul>
+		</div>
+
+		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 nav-item" id="to-gallery">Gallery</div>
+		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 nav-item">Contact</div>
 	</div>
-</div>
 
-<div class="company row">
-	<div class="bg-overlay">
-		<div class="company-text">
-			<h1>Our Mission </h1>
-			<h3>Feeding People Nutritiously</h3>
-			<h3>Empowering People Respectfully</h3>
-			<p>We maintain professionalism in everything we do, continue to grow and expand to meet the demands of our customers, excel through industry leadership & trends, be competitive, surpass expectations, and develop long-lasting relationships with suppliers and customers to sustain growth.</p>
- 		</div>
-	</div>
-</div>
-
-<div class="crew-head row">
-	<h2>Meet Our Team</h2>
-</div>
-
-<div class="crew row">
+	<!-- Slideshow and Main Text -->
 	<div class="row">
+		<div class="slides-col col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<img class="mySlides" src="https://static.wixstatic.com/media/cf177a_2d44ce2f652e425c85e29ead4314052c.jpg/v1/fill/w_743,h_743,al_c,q_90,usm_0.66_1.00_0.01/cf177a_2d44ce2f652e425c85e29ead4314052c.jpg">
+			<img class="mySlides" src="https://static.wixstatic.com/media/cf177a_0bb30afbed0d41a9a616a63da342f9c7.jpg/v1/fill/w_743,h_743,al_c,q_90,usm_0.66_1.00_0.01/cf177a_0bb30afbed0d41a9a616a63da342f9c7.jpg">
+			<img class="mySlides" src="https://static.wixstatic.com/media/cf177a_78d0da3a23fd47279cea1c6a2be0bd2b.jpg/v1/fill/w_800,h_600,al_c,q_90/cf177a_78d0da3a23fd47279cea1c6a2be0bd2b.jpg">
+			<img class="mySlides" src="https://static.wixstatic.com/media/cf177a_5474b0c5184c4e568a31576cdbde8c85.jpg/v1/fill/w_557,h_743,al_c,q_90,usm_0.66_1.00_0.01/cf177a_5474b0c5184c4e568a31576cdbde8c85.jpg">
+			
+			<span class="glyphicon glyphicon-chevron-left slide-left" ng-click="plusDivs(-1)" aria-hidden="true"></span>
+			<span class="glyphicon glyphicon-chevron-right slide-right" ng-click="plusDivs(+1)" aria-hidden="true"></span>
+		</div>
+
+		<div class="text-col col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<h1>Our <strong>Commitment</strong></h1>
+			<h4>We are a fresh new company committed to serving the best quality, health orientated food to a growing demand of business conferences, private functions and events.</h4>
+			<div class="row social-bar">
+				<a href="https://www.facebook.com/RawCateringCo/">
+					<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS4rCbG68OzQhKT-hnmwJy_kYa8vak5H_GyZxTUzyOd8ElUmsXAUg" class="img-rounded social-item">
+				</a>
+				<a href="https://www.instagram.com/rawcateringco/">
+					<img src="http://assets.nydailynews.com/polopoly_fs/1.2632886.1462976353!/img/httpImage/image.jpg_gen/derivatives/article_750/instagram12n-1-web.jpg" class="img-rounded social-item">
+				</a>
+				<a href="https://twitter.com/Rawcateringco">
+					<img src="http://www.blazingcatfur.ca/wp-content/uploads/2016/02/Twitter-logo21.png" class="img-rounded social-item">
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Company's Mission -->
+	<div class="company row">
+		<div class="bg-overlay">
+			<div class="company-text">
+				<h1>Our Mission </h1>
+				<h3>Feeding People Nutritiously</h3>
+				<h3>Empowering People Respectfully</h3>
+				<p>We maintain professionalism in everything we do, continue to grow and expand to meet the demands of our customers, excel through industry leadership & trends, be competitive, surpass expectations, and develop long-lasting relationships with suppliers and customers to sustain growth.</p>
+	 		</div>
+		</div>
+	</div>
+
+	<!-- Crew and Member Information -->
+	<div class="crew-head row">
+		<h2>Meet Our Team</h2>
+	</div>
+
+	<div class="crew row">
 		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 member member1">
 			<div class="bg-overlay member-intro">
 				<h4>Trenton Devine</h4>
@@ -121,98 +124,69 @@
 				<center><div class="glyphicon glyphicon-play icon" aria-hidden="true"></div></center>
 			</div>
 		</div>
-		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 member member3">
-			<div class="bg-overlay member-intro"></div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 member member3">
+			<div class="bg-overlay member-intro">
+				<h4>Our Staff</h4>
+				<p>jdiasj jiajd</p>
+				<center><div class="glyphicon glyphicon-play icon" aria-hidden="true"></div></center>
+			</div>
 		</div>
-		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 member member4">
-			<div class="bg-overlay member-intro"></div>
-		</div>
-</div>
-
-<div class="row crew-head">
-	<h2>What we offer</h2>
-</div>
-
-<div class="services row">
-	<div class="black-bg-overlay">
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
-		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 service-btn" id="slide1-btn">Canapés</div>
-		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 service-btn" id="slide2-btn">Bowl Food (Hot, Cold, Dessert)</div>
-		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 service-btn" id="slide3-btn">Corporate Catering</div>
 	</div>
 
-	<div class="slide1 slide" id="slide1"></div>
-	<div class="slide2 slide" id="slide2"></div>
-	<div class="slide3 slide" id="slide3"></div>
-
-	<div class="slide-overlay1 slide-overlay" id="slide-overlay1">
-		<h1>MENU1</h1>
-		<p>Here is a sample menu that will pop up when I click on canapres.</p>
+	<!-- Menus and Services -->
+	<div class="row crew-head">
+		<h2>What we offer</h2>
 	</div>
-	<div class="slide-overlay2 slide-overlay" id="slide-overlay2">
-		<h1>MENU2</h1>
-		<p>Here is a sample menu that will pop up when I click on bowl food.</p>
+	<div class="services row">
+		<div class="black-bg-overlay">
+			<div class="service-btn canapes" id="slide1-btn">Canapés</div>
+			<div class="service-btn" id="slide2-btn">Bowl Food (Hot, Cold, Dessert)</div>
+			<div class="service-btn" id="slide3-btn">Corporate Catering</div>
+		</div>
+
+		<div class="slide1 slide" id="slide1"></div>
+		<div class="slide2 slide" id="slide2"></div>
+		<div class="slide3 slide" id="slide3"></div>
+
+		<div class="slide-overlay1 slide-overlay" id="slide-overlay1">
+			<h1>MENU1</h1>
+			<p>Here is a sample menu that will pop up when I click on canapres.</p>
+		</div>
+		<div class="slide-overlay2 slide-overlay" id="slide-overlay2">
+			<h1>MENU2</h1>
+			<p>Here is a sample menu that will pop up when I click on bowl food.</p>
+		</div>
+		<div class="slide-overlay3 slide-overlay" id="slide-overlay3">
+			<h1>MENU3</h1>
+			<p>Here is a sample menu that will pop up when I click on corporate catering.</p>
+		</div>
 	</div>
-	<div class="slide-overlay3 slide-overlay" id="slide-overlay3">
-		<h1>MENU3</h1>
-		<p>Here is a sample menu that will pop up when I click on corporate catering.</p>
-	</div>
 
-</div>
-
-<div class="row gallery">
-	<h2>The Gallery</h2>
-
-	<!-- <div class="row gallery-pic">
-		<div class="pic2">
-			<img src="pics/gallery1.jpg">
-		</div>
-		<div class="pic2">
-			<img src="https://static.wixstatic.com/media/8ee889fef1f05a9ddd91a3d0eb54e017.jpg/v1/fill/w_161,h_161,al_c,q_80,usm_0.66_1.00_0.01/8ee889fef1f05a9ddd91a3d0eb54e017.jpg">
-		</div>
-		<div class="pic2">
-			<img src="https://static.wixstatic.com/media/25f9e7b5ee37f06ea1f94fa331dd2623.jpg/v1/fill/w_161,h_161,al_c,q_80,usm_0.66_1.00_0.01/25f9e7b5ee37f06ea1f94fa331dd2623.jpg">
-		</div>
-		<div class="pic2">
-			<img src="https://static.wixstatic.com/media/214ec6_6c48170fbf65a657cf295acc70d8ec86.jpg/v1/fill/w_161,h_161,al_c,q_80,usm_0.66_1.00_0.01/214ec6_6c48170fbf65a657cf295acc70d8ec86.jpg">
-		</div>
-		<div class="pic2">
-			<img src="https://static.wixstatic.com/media/c888c45102354f4eb4666bf3d673529f.jpg/v1/fill/w_161,h_161,al_c,q_80,usm_0.66_1.00_0.01/c888c45102354f4eb4666bf3d673529f.jpg">
-		</div>
-
-		<div class="pic2">
-			<img src="https://static.wixstatic.com/media/edd67875ef8b46efbfe8adb4d26bdaba.jpg/v1/fill/w_485,h_774,al_c,q_90,usm_0.66_1.00_0.01/edd67875ef8b46efbfe8adb4d26bdaba.jpg">
-		</div>
-		<div class="pic2">
-			<img src="pics/gallery3.jpg">
-		</div>
-		<div class="pic2">
-			<img src="pics/gallery4.jpg">
-		</div>
-		<div class="pic2">
-			<img src="https://scontent.xx.fbcdn.net/v/t1.0-9/12227824_487515098076756_2864991047451310094_n.jpg?oh=0a82dd76f962e93c352efee4d6179d3f&oe=58233E64">
-		</div>
-		<div class="pic2">
-			<img src="https://scontent.xx.fbcdn.net/v/t1.0-9/12208501_486327061528893_7515405438734719751_n.jpg?oh=193dfe7a8871d6b1ac3b7d767da25d44&oe=581C4C37">
-		</div>
-
-	</div> -->
-
-	<div class="row gallery-pic">
-		<ul style="list-style:none;">
-			<li ng-repeat="pic in picArray track by $index">
-				<div class="pic2">
-					<img src="{{pic.images.standard_resolution.url}}">
-					<div class="pic2-stats">
-						<span class="glyphicon glyphicon glyphicon-heart-empty" aria-hidden="true"><span style="font-family:'Lobster'" >{{pic.likes.count}}</span></span>
-						<span class="glyphicon glyphicon glyphicon-comment" aria-hidden="true"><span style="font-family:'Lobster'" >{{pic.comments.count}}</span></span>
-						<p>{{pic.caption.text}}</p>
+	<!-- The Instagram Photo Gallery -->
+	<div class="row gallery">
+		<h2>The Gallery</h2>
+		<div class="row gallery-pic">
+			<ul style="list-style:none;">
+				<li ng-repeat="pic in picArray track by $index">
+					<div class="pic2 col-lg-2 col-md-2 col-sm-2 col-xs-1">
+						<img src="{{pic.images.standard_resolution.url}}">
+						<div class="pic2-stats">
+							<span class="glyphicon glyphicon glyphicon-heart-empty" aria-hidden="true"><span style="font-family:'Lobster'" >{{pic.likes.count}}</span></span>
+							<span class="glyphicon glyphicon glyphicon-comment" aria-hidden="true"><span style="font-family:'Lobster'" >{{pic.comments.count}}</span></span>
+							<p>{{pic.caption.text}}</p>
+						</div>
 					</div>
-				</div>
-			</li>
-		</ul>
+				</li>
+			</ul>
+		</div>
 	</div>
+
+	<!-- Map API and Facebook Review --> 
+	<div class="row apis">
+		<div class="map col-lg-6 col-md-6 col-sm-6 col-xs-12"></div>
+		<div class="fb col-lg-6 col-md-6 col-sm-6 col-xs-12"></div>
+	</div>
+
+	<!-- Google API key:AIzaSyAVTXLZYAsfKE2SOFY8ABATX5etDmvjs0M -->
 
 </div>

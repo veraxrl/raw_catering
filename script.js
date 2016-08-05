@@ -95,10 +95,10 @@ app.controller('mainCtrl', function($scope, $http, $routeParams, $firebaseObject
             url: mediaUrl,
             params: {
                 callback: "JSON_CALLBACK",
-                access_token:"244365755.655f99b.51434ba0588f4f968e556a6a0eda9025"
+                access_token:"2272162770.ac9da07.498560a0b94542af86af531265697001"
             }
         }).then(function(response) {
-          $scope.picArray = response.data.data.slice(0,8);
+          $scope.picArray = response.data.data.slice(0,15);
           console.log(response);
           // now analyze the sentiments and do some other analysis
           // on your images
