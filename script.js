@@ -116,13 +116,38 @@ app.controller('mainCtrl', function($scope, $http, $firebaseArray, $firebaseObje
       }
       token = token.split("=")[1];
 
-    //media query: 
-    var mq = window.matchMedia( "(min-width: 1000px)" );
-    if (mq.matches) {
-      // window width is at least 500px
-    } else {
-      // window width is less than 500px
+    //Media query: 
+    var mq = window.matchMedia( "(min-width: 1400px)" );
+    var mq2 = window.matchMedia( "(min-width: 1250px)" );
+    var mq3 = window.matchMedia( "(min-width: 1050px)" );
+    var mq4 = window.matchMedia( "(min-width: 850px)" ); 
+    var mq5 = window.matchMedia( "(min-width: 650px)" ); 
+    if (mq.matches && mq2.matches && mq3.matches && mq4.matches && mq5.matches) {
+        console.log("larger than 1400");
+        $scope.instaNum=14;
+    } 
+    else if (!mq.matches && mq2.matches && mq3.matches && mq4.matches && mq5.matches) {
+        console.log("1250-1400");
+        $scope.instaNum=12;
     }
+    else if (!mq.matches && !mq2.matches && mq3.matches && mq4.matches && mq5.matches) {
+        console.log("1050-1250");
+        $scope.instaNum=10;
+    } 
+    else if (!mq.matches && !mq2.matches && !mq3.matches && mq4.matches && mq5.matches) {
+        console.log("850-1050")
+        $scope.instaNum=8;
+    }
+    else if (!mq.matches && !mq2.matches && !mq3.matches && !mq4.matches && mq5.matches) {
+        console.log("<850")
+        $scope.instaNum=6;
+    }
+    else if (!mq.matches && !mq2.matches && !mq3.matches && !mq4.matches && !mq5.matches) {
+        console.log("<650")
+        $scope.instaNum=4;
+    }
+
+
 
       $scope.getInstaPics = function() {
           var path = "/users/self/media/recent";
@@ -135,7 +160,7 @@ app.controller('mainCtrl', function($scope, $http, $firebaseArray, $firebaseObje
                 access_token:"2272162770.ac9da07.498560a0b94542af86af531265697001"
             }
         }).then(function(response) {
-          $scope.picArray = response.data.data.slice(0,20);
+          $scope.picArray = response.data.data.slice(0,$scope.instaNum);
           // console.log(response);
           // now analyze the sentiments and do some other analysis
           // on your images
