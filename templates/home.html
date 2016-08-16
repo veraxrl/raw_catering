@@ -1,4 +1,3 @@
-<div class="container-fluid">
 	<!-- Address and Contact Information -->
 	<div class="row top">
 		<div class="glyphicon glyphicon-earphone left" aria-hidden="true"></div>
@@ -70,6 +69,12 @@
 			<img class="mySlides" src="https://static.wixstatic.com/media/cf177a_0bb30afbed0d41a9a616a63da342f9c7.jpg/v1/fill/w_743,h_743,al_c,q_90,usm_0.66_1.00_0.01/cf177a_0bb30afbed0d41a9a616a63da342f9c7.jpg">
 			<img class="mySlides" src="https://static.wixstatic.com/media/cf177a_78d0da3a23fd47279cea1c6a2be0bd2b.jpg/v1/fill/w_800,h_600,al_c,q_90/cf177a_78d0da3a23fd47279cea1c6a2be0bd2b.jpg">
 			<img class="mySlides" src="https://static.wixstatic.com/media/cf177a_5474b0c5184c4e568a31576cdbde8c85.jpg/v1/fill/w_557,h_743,al_c,q_90,usm_0.66_1.00_0.01/cf177a_5474b0c5184c4e568a31576cdbde8c85.jpg">
+
+			<img class="mySlides" src="pics/slide1.jpg">
+			<img class="mySlides" src="pics/slide2.jpg">
+			<img class="mySlides" src="pics/slide3.jpg">
+			<img class="mySlides" src="pics/slide4.jpg">
+			<img class="mySlides" src="pics/slide5.jpg">
 			
 			<span class="glyphicon glyphicon-chevron-left slide-left" ng-click="plusDivs(-1)" aria-hidden="true"></span>
 			<span class="glyphicon glyphicon-chevron-right slide-right" ng-click="plusDivs(+1)" aria-hidden="true"></span>
@@ -104,6 +109,11 @@
 		</div>
 	</div>
 
+	<!-- Youtube Video -->
+	<div class="row video">
+		<youtube-video class="youtube" video-url="anotherGoodOne" player="bestPlayer"></youtube-video>
+	</div>
+
 	<!-- Crew and Member Information -->
 	<div class="crew-head row">
 		<h2>Meet Our Team</h2>
@@ -114,21 +124,22 @@
 			<div class="bg-overlay member-intro">
 				<h4>Trenton Devine</h4>
 				<p>Managing Director at Raw Catering Co.</p>
-				<center><div class="glyphicon glyphicon-play icon" aria-hidden="true"></div></center>
+				<p>4 years experience on Super Yachts, catering forsome of the world’s elite, Trent brings both professionalism and finesse, to his catering and management experience</p>
 			</div>
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 member member2">
 			<div class="bg-overlay member-intro">
 				<h4>Tyrone Kidney</h4>
 				<p>Director at Raw Catering Co.</p>
-				<center><div class="glyphicon glyphicon-play icon" aria-hidden="true"></div></center>
+				<p>With over 7 years experienc e in the hosptality industry Tyrone's commitment is not only to deliver the highest service but to exceed the guest expectations.</p>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 member member3">
 			<div class="bg-overlay member-intro">
 				<h4>Our Staff</h4>
-				<p>jdiasj jiajd</p>
-				<center><div class="glyphicon glyphicon-play icon" aria-hidden="true"></div></center>
+				<p>Megan Smith - Head Chef</p>
+				<p>Nonqaba Bikauri (Bianca) - Senior Chef / Pastry Specialist</p>
+				<p>Miseka Mbelesi - (Mimi) - Junior Cook</p>
 			</div>
 		</div>
 	</div>
@@ -149,22 +160,35 @@
 		<div class="slide3 slide" id="slide3"></div>
 
 		<div class="slide-overlay1 slide-overlay" id="slide-overlay1">
-			<h1>MENU1</h1>
-			<p>Here is a sample menu that will pop up when I click on canapres.</p>
+			<h1>CANAPES</h1>
+			<div class="sample-menu">
+				<p>Caesar salad skewers</p>
+				<p>Chicken satay skewers with a homemade satay sauce</p>
+				<p>Chicken liver pate’, red onion & beetroot marmalade en croute</p>
+				<p>Karagi chicken skewers with a chilli plum dipping sauce</p>
+				<p>Asian chicken potstickers with a spicy ponzu sauce</p>
+				<p>5 spice duck & vermicelli spring rolls</p>
+				<p>...</p>
+			</div>
+			<div class="menu-btn"><a href="menus/canapes.pdf">View PDF</a></div>
 		</div>
 		<div class="slide-overlay2 slide-overlay" id="slide-overlay2">
-			<h1>MENU2</h1>
-			<p>Here is a sample menu that will pop up when I click on bowl food.</p>
+			<h1>BOWL FOOD</h1>
+			<div class="sample-menu">
+				<p>Bowl food offers an exciting and unique service style that allows your guests the delight of sampling a range of delicious and complementary dishes without interrupting the party. Networking can carry on undisturbed as waiting staff circulate with delicious mini main courses that can easily be eaten with a fork while standing. Your guests are happy and well fed and buffet queues are a thing of the past.</p>
+			</div>
+			<div class="menu-btn2"><a href="menus/cold.pdf">Cold Bowl Food</a></div>
+			<div class="menu-btn2"><a href="menus/hot.pdf">Hot Bowl Food</a></div>
+			<div class="menu-btn2"><a href="menus/dessert.pdf">Bowl Food Dessert</a></div>
 		</div>
 		<div class="slide-overlay3 slide-overlay" id="slide-overlay3">
-			<h1>MENU3</h1>
-			<p>Here is a sample menu that will pop up when I click on corporate catering.</p>
+			<h1>CORPORATE CATERING</h1>
+			<div class="menu-btn3"><a href="menus/conference.pdf">Conference Menu</a></div>
 		</div>
 	</div>
 
 	<!-- The Instagram Photo Gallery -->
 	<div class="row gallery">
-		<h2>The Gallery</h2>
 		<div class="row gallery-pic">
 			<ul style="list-style:none;">
 				<li ng-repeat="pic in picArray track by $index">
@@ -183,10 +207,15 @@
 
 	<!-- Map API and Facebook Review --> 
 	<div class="row apis">
-		<div class="map col-lg-6 col-md-6 col-sm-6 col-xs-12"></div>
+		<div class="map col-lg-6 col-md-6 col-sm-6 col-xs-12" id="map"></div>
 		<div class="fb col-lg-6 col-md-6 col-sm-6 col-xs-12"></div>
 	</div>
 
 	<!-- Google API key:AIzaSyAVTXLZYAsfKE2SOFY8ABATX5etDmvjs0M -->
 
-</div>
+	<!-- Foot Note -->
+	<div class="row foot">
+		<div class="bg-overlay">
+			<img src="pics/bon-appetit.png">
+		</div>
+	</div>

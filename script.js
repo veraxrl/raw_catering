@@ -1,4 +1,4 @@
-var app = angular.module('rawApp', ["ngRoute","firebase"]); 
+var app = angular.module('rawApp', ["ngRoute","firebase","youtube-embed"]); 
 var INSTA_API_BASE_URL = "https://api.instagram.com/v1";
 
 app.config(function($routeProvider) {
@@ -14,9 +14,26 @@ app.config(function($routeProvider) {
     })                                   
 });
 
-app.controller('mainCtrl', function($scope, $http, $routeParams, $firebaseObject, $firebaseAuth) {
+app.controller('mainCtrl', function($scope, $http, $firebaseArray, $firebaseObject, $firebaseAuth, $location, $routeParams, $route) {
 
-    $scope.slideIndex = 1;
+    //Automatic SlideShow:
+    $scope.slideIndex = 0;
+
+    $scope.carousel = function() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none"; 
+        }
+        $scope.slideIndex=$scope.slideIndex+1;
+        if ($scope.slideIndex > x.length) {$scope.slideIndex = 1} 
+        x[$scope.slideIndex-1].style.display = "block"; 
+        setTimeout($scope.carousel, 3000); // Change image every 2 seconds
+    }
+
+    $scope.carousel();
+
+    //Click-through Slideshow:
 
     $scope.plusDivs = function(n) {
         $scope.showDivs($scope.slideIndex += n);
@@ -33,7 +50,7 @@ app.controller('mainCtrl', function($scope, $http, $routeParams, $firebaseObject
         x[$scope.slideIndex-1].style.display = "block"; 
     }
     
-    $scope.showDivs($scope.slideIndex);
+    //Jump Navigation:
 
     var mission = document.getElementById("to-mission");
     var team = document.getElementById("to-team");
@@ -77,6 +94,18 @@ app.controller('mainCtrl', function($scope, $http, $routeParams, $firebaseObject
         header3.classList.add('isVisible');
         shadow3.classList.add('isVisible');
     }
+    header1.onclick = function() {
+        header1.classList.remove('isVisible');
+        shadow1.classList.remove('isVisible');
+    }
+    header2.onclick = function() {
+        header2.classList.remove('isVisible');
+        shadow2.classList.remove('isVisible');
+    }
+    header3.onclick = function() {
+        header3.classList.remove('isVisible');
+        shadow3.classList.remove('isVisible');
+    }
 
     //Instagram feed: 
       $scope.hasToken = true;
@@ -86,6 +115,14 @@ app.controller('mainCtrl', function($scope, $http, $routeParams, $firebaseObject
         $scope.hasToken = false;
       }
       token = token.split("=")[1];
+
+    //media query: 
+    var mq = window.matchMedia( "(min-width: 1000px)" );
+    if (mq.matches) {
+      // window width is at least 500px
+    } else {
+      // window width is less than 500px
+    }
 
       $scope.getInstaPics = function() {
           var path = "/users/self/media/recent";
@@ -98,8 +135,8 @@ app.controller('mainCtrl', function($scope, $http, $routeParams, $firebaseObject
                 access_token:"2272162770.ac9da07.498560a0b94542af86af531265697001"
             }
         }).then(function(response) {
-          $scope.picArray = response.data.data.slice(0,15);
-          console.log(response);
+          $scope.picArray = response.data.data.slice(0,20);
+          // console.log(response);
           // now analyze the sentiments and do some other analysis
           // on your images
 
@@ -107,6 +144,30 @@ app.controller('mainCtrl', function($scope, $http, $routeParams, $firebaseObject
     };
 
     $scope.getInstaPics();
+
+    // Google Map API
+    var map;
+    $scope.initMap=function() {
+        console.log(document.getElementById('map'));
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -33.906, lng: 18.418},
+          zoom: 15
+        });
+    console.log(map);
+    }
+    $scope.initMap();
+
+    //Youtube API:
+    $scope.playTrack = function() {
+        $scope.anotherGoodOne = 'https://youtu.be/kO2uAS2V7BE';
+    }
+
+    $scope.playTrack();
+
+    //Auto play:
+    // $scope.$on('youtube.player.ready',function($event,player) {
+    //     console.log("stopped");
+    // });
 
 });
 

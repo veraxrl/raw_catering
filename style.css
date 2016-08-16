@@ -20,7 +20,7 @@ body {
 	float:right;
 }
 .logo-col {
-	background-image: url("pics/header.jpg");
+	background-image: url("pics/header3.jpg");
 	background-size: 100% auto;
 	height: 160px;
 	position: relative;
@@ -45,7 +45,7 @@ body {
 	height: 50px;
 }
 .social-item {
-	width: 30px;
+	width: 40px;
 	height: 40px;
 	margin: 10px 10px;
 }
@@ -107,7 +107,7 @@ body {
 }
 .company {
 	position: relative;
-	background-image: url("pics/mission.jpg");
+	background-image: url("pics/mission2.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 	height:400px;
@@ -137,17 +137,18 @@ body {
 	font-family: 'Lobster', cursive;
 }
 .member1 {
-	background: url("http://pre07.deviantart.net/d84f/th/pre/f/2012/218/5/b/pikachu_hd_by_alexdj94-d5a0dau.png");
+	background: url("pics/trenton.jpg");
 }
 .member2 {
-	background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx2cIbyekb8xlu84XXSP_Cx0F3EVbQhl-ma1lkBL6lKOhn0Orn");
+	background: url("pics/tyrone.jpg");
+	background-size: cover;
 }
 .member3 {
 	background: url("pics/staff.jpg");
 }
 .member {
 	position:relative;
-	height: 270px;
+	height: 250px;
 	border: 1px solid black;
 	background-repeat: no-repeat;
 	background-size: 100% auto;
@@ -174,19 +175,14 @@ body {
 }
 .gallery {
 	background-color: black;
-	height: 600px;
 	color: white;
 }
-.gallery h2 {
-	margin:30px 0;
-	font-family: 'Lobster', cursive;
-} 
 .gallery-pic {
-	margin:0px 100px;
+	margin:20px 0px;
 }
 .pic2 {
-	width: 150px;
-	height: 150px;
+	width: 200px;
+	height: 200px;
 	position: relative;
 }
 .pic2 img {
@@ -195,8 +191,8 @@ body {
 	bottom: 0;
 	right: 0;
 	left: 0;
-	width: 150px;
-	height: 150px;
+	width: 200px;
+	height: 200px;
 	z-index: 1;
 }
 .pic2-stats {
@@ -208,7 +204,7 @@ body {
 	color: white;
 	z-index: 2;
 	display: none;
-	font-size:10px;
+	font-size:13px;
 }
 .pic2-stats span {
 	margin:10px 10px;
@@ -236,6 +232,42 @@ body {
     color: white;
     border: 3px solid white;
     font-family: 'Lobster', cursive;
+}
+.sample-menu {
+	margin:30px 70px;
+}
+.menu-btn {
+	padding: 10px;
+	height: 40px;
+	width: 100px;
+	margin:10px auto;
+	border: 2px solid #f54200;
+}
+.menu-btn2 {
+	padding: 10px;
+	height: 40px;
+	width: 150px;
+	margin:10px auto;
+	border: 2px solid black;
+}
+.menu-btn3 {
+	padding: 10px;
+	height: 40px;
+	width: 160px;
+	margin:10px auto;
+	border: 2px solid red;
+}
+.menu-btn a {
+	text-decoration: none;
+	color: #f54200;
+}
+.menu-btn2 a {
+	text-decoration: none;
+	color:black;
+}
+.menu-btn3 a {
+	text-decoration: none;
+	color:red;
 }
 .service-btn:first-child {
 	margin-left: 100px;
@@ -296,13 +328,32 @@ body {
 }
 .map {
 	height: 600px;
-	border: 2px solid #00BFA5;
-	background-color: #A7FFEB;
 }
 .fb {
 	height: 600px;
-	border: 2px solid #00BFA5;
 	background-color: #64FFDA;	
+}
+.video {
+	height: 500px;
+	background-color:white;
+}
+.youtube {
+	width: 100%;
+	height: 500px;
+}
+.foot {
+	background: url("pics/foot.JPG");
+	background-size: 100% auto;
+	height: 400px;
+	position: relative;
+}
+.foot .bg-overlay {
+	opacity: 0.7;
+	background-color:white;
+}
+.foot .bg-overlay img {
+	width: 400px;
+	margin:100px auto;
 }
 
 /*Media Query:*/ 
@@ -370,10 +421,10 @@ body {
 	}
 }
 @media (max-width: 800px) {
-	.logo-col {
-		background: url("pics/header2.jpg");
+/*	.logo-col {
+		background: url("pics/header3.jpg");
 		background-size: 100% auto;
-	}
+	}*/
 	.company p {
 		width: 600px;
 	}

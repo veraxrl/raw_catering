@@ -1,9 +1,7 @@
-1. Adjust headline picture: two repeats now. Better pics coming.
+1. Autoplay on Videos 
 
-2. Menus 
+2. Menus: tags and menus don't match 
 
-3. Redo the gallery 
+3. Redo the gallery layout 
 
-4. Make black overlay works
-
-**Online testimonials with Logan
+4. Make black overlay off button works
