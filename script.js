@@ -160,7 +160,7 @@ app.controller('mainCtrl', function($scope, $http, $firebaseArray, $firebaseObje
                 access_token:"2272162770.ac9da07.498560a0b94542af86af531265697001"
             }
         }).then(function(response) {
-          $scope.picArray = response.data.data.slice(0,$scope.instaNum);
+          $scope.picArray = response.data.data.slice(0,12);
           // console.log(response);
           // now analyze the sentiments and do some other analysis
           // on your images
@@ -184,10 +184,14 @@ app.controller('mainCtrl', function($scope, $http, $firebaseArray, $firebaseObje
 
     //Youtube API:
     $scope.playTrack = function() {
+        console.log("load youtube track");
+        $scope.showYT=true;
         $scope.anotherGoodOne = 'https://youtu.be/kO2uAS2V7BE';
     }
 
-    $scope.playTrack();
+    $scope.toggleYT = function() {
+        $scope.showYT=false;
+    }
 
     //Auto play:
     // $scope.$on('youtube.player.ready',function($event,player) {

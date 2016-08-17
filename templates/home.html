@@ -67,7 +67,15 @@
 
 	</div>
 
-	<div class="row empty"></div>
+	<div class="row empty">
+		<div class="row play-bar"></div>
+		<img id="play-button" ng-click="playTrack()" src="pics/play.png">
+	</div>
+
+	<div class="youtube-bg" ng-show="showYT">
+		<youtube-video class="youtube" video-url="anotherGoodOne" player="bestPlayer"></youtube-video>
+		<img id="close-button" ng-click="toggleYT()" src="pics/close.png">
+	</div>
 
 	<!-- Slideshow and Main Text -->
 	<div class="row">
@@ -116,42 +124,49 @@
 		</div>
 	</div>
 
-	<div class="row empty"></div>
+	<!-- Crew and Member Information -->
+
+	<div class="row empty">
+		<div class="midrow"></div>
+		<div class="team">
+			<div class="row member">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<img src="pics/trenton.jpg" class="img-circle thumb">
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<h4>Trenton Devine</h4>
+					<p>Managing Director at Raw Catering Co.</p>
+					<p>4 years experience on Super Yachts, catering forsome of the world’s elite, Trent brings both professionalism and finesse, to his catering and management experience</p>
+				</div>
+			</div>
+			<div class="row member">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<img src="pics/tyrone.jpg" class="img-circle thumb">
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<h4>Tyrone Kidney</h4>
+					<p>Director at Raw Catering Co.</p>
+					<p>With over 7 years experienc e in the hosptality industry Tyrone's commitment is not only to deliver the highest service but to exceed the guest expectations.</p>
+				</div>
+			</div>
+			<div class="row member">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<img src="pics/staff.jpg" class="img-circle thumb">
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<h4>Our Staff</h4>
+					<p>Megan Smith - Head Chef</p>
+					<p>Nonqaba Bikauri (Bianca) - Senior Chef / Pastry Specialist</p>
+					<p>Miseka Mbelesi - (Mimi) - Junior Cook</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- Youtube Video -->
-	<div class="row video">
+<!-- 	<div class="row video">
 		<youtube-video class="youtube" video-url="anotherGoodOne" player="bestPlayer"></youtube-video>
-	</div>
-
-	<!-- Crew and Member Information -->
-	<div class="crew-head row">
-		<h2>Meet Our Team</h2>
-	</div>
-
-	<div class="crew row">
-		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 member member1">
-			<div class="bg-overlay member-intro">
-				<h4>Trenton Devine</h4>
-				<p>Managing Director at Raw Catering Co.</p>
-				<p>4 years experience on Super Yachts, catering forsome of the world’s elite, Trent brings both professionalism and finesse, to his catering and management experience</p>
-			</div>
-		</div>
-		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 member member2">
-			<div class="bg-overlay member-intro">
-				<h4>Tyrone Kidney</h4>
-				<p>Director at Raw Catering Co.</p>
-				<p>With over 7 years experienc e in the hosptality industry Tyrone's commitment is not only to deliver the highest service but to exceed the guest expectations.</p>
-			</div>
-		</div>
-		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 member member3">
-			<div class="bg-overlay member-intro">
-				<h4>Our Staff</h4>
-				<p>Megan Smith - Head Chef</p>
-				<p>Nonqaba Bikauri (Bianca) - Senior Chef / Pastry Specialist</p>
-				<p>Miseka Mbelesi - (Mimi) - Junior Cook</p>
-			</div>
-		</div>
-	</div>
+	</div> -->
 
 	<!-- Menus and Services -->
 	<div class="row crew-head">
@@ -197,7 +212,7 @@
 	</div>
 
 	<!-- The Instagram Photo Gallery -->
-	<div class="row gallery">
+<!-- 	<div class="row gallery">
 		<div class="row gallery-pic">
 			<ul style="list-style:none;">
 				<li ng-repeat="pic in picArray track by $index">
@@ -212,12 +227,31 @@
 				</li>
 			</ul>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- Map API and Facebook Review --> 
 	<div class="row apis">
 		<div class="map col-lg-6 col-md-6 col-sm-6 col-xs-12" id="map"></div>
-		<div class="fb col-lg-6 col-md-6 col-sm-6 col-xs-12"></div>
+		<div class="fb col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			
+			<div class="row gallery">
+				<div class="row gallery-pic">
+					<ul style="list-style:none;">
+						<li ng-repeat="pic in picArray track by $index">
+							<div class="pic2 col-lg-2 col-md-2 col-sm-2 col-xs-1">
+								<img src="{{pic.images.standard_resolution.url}}">
+								<div class="pic2-stats">
+									<span class="glyphicon glyphicon glyphicon-heart-empty" aria-hidden="true"><span style="font-family:'Lobster'" >{{pic.likes.count}}</span></span>
+									<span class="glyphicon glyphicon glyphicon-comment" aria-hidden="true"><span style="font-family:'Lobster'" >{{pic.comments.count}}</span></span>
+									<p>{{pic.caption.text}}</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
 	</div>
 
 	<!-- Google API key:AIzaSyAVTXLZYAsfKE2SOFY8ABATX5etDmvjs0M -->
