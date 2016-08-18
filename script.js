@@ -160,7 +160,7 @@ app.controller('mainCtrl', function($scope, $http, $firebaseArray, $firebaseObje
                 access_token:"2272162770.ac9da07.498560a0b94542af86af531265697001"
             }
         }).then(function(response) {
-          $scope.picArray = response.data.data.slice(0,12);
+          $scope.picArray = response.data.data.slice(0,$scope.instaNum);
           // console.log(response);
           // now analyze the sentiments and do some other analysis
           // on your images
@@ -176,7 +176,7 @@ app.controller('mainCtrl', function($scope, $http, $firebaseArray, $firebaseObje
         console.log(document.getElementById('map'));
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -33.906, lng: 18.418},
-          zoom: 15
+          zoom: 18
         });
     console.log(map);
     }
@@ -197,6 +197,31 @@ app.controller('mainCtrl', function($scope, $http, $firebaseArray, $firebaseObje
     // $scope.$on('youtube.player.ready',function($event,player) {
     //     console.log("stopped");
     // });
+
+    /* make the API call to get permanent access token */
+    // $scope.httpGetAsync = function (theUrl, callback)
+    // {
+    //     var xmlHttp = new XMLHttpRequest();
+    //     xmlHttp.onreadystatechange = function() { 
+    //         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+    //             callback(xmlHttp.responseText);
+    //     }
+    //     xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    //     xmlHttp.send(null);
+    // }
+
+    // var theUrl='https://graph.facebook.com/v2.2/oauth/access_token?grant_type=fb_exchange_token&client_id={1775390709409158}&client_secret={b04fbaa611e7e1b3e98846527e2accbd}&fb_exchange_token={EAACEdEose0cBAJuLlNEKGrNgdZAaxyQQ6T2FYpW2GpH9pZAXOVXe7NlrfcoICASJ6XZCBjlA5nvUEKvAdEQaZC0qlZAQEZAQJWDghNZAX45QpoowQBgm6vIK3lioSHPLDMBlvjcZBHT8f2GImzAixcbWa7dvgXTUYRlBc3EIHMceXgZDZD}';
+    // $scope.httpGetAsync(theUrl,"http://localhost:8000/#/");
+
+    // Facebook API call to get information
+    if (typeof(FB) != 'undefined' && FB != null ) {
+        FB.api('me?fields=ratings', 'get', { access_token: 'EAACEdEose0cBAOYNSzx5jRvABjH2nOIrfLkC8Wou46ZCQWe4ZAoXZCzzczbnwOgMk8ISHHc8iyJYkSLEBZA4t5cFir7H0et2LVlsZBaeZBwtHBhfIT2WFwCnDfawCXoETI3V6ZCXANlyZChCZC1ajH1yVRUnRphNvdrY7jlhqZCGU89AZDZD' }, function(response) {
+          console.log(response);
+          $scope.reviews= response.ratings.data;
+        });
+    } else {
+        console.log("FB is not defined dummy");
+    }
 
 });
 

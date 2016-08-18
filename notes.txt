@@ -1,7 +1,9 @@
 1. Autoplay on Videos 
 
-2. Menus: tags and menus don't match 
+2. Get the FB API
 
-3. Redo the gallery layout 
+3. Add animations 
 
-4. Make black overlay off button works
+4. Review mobile responsiveness
+
+5. Get the website published 

@@ -17,7 +17,7 @@
 			<div class="bg-overlay"></div>
 			<center>
 				<div class="row logo">
-					<img src="https://scontent.xx.fbcdn.net/v/t1.0-9/12990859_546391932189072_4012334807621871651_n.jpg?oh=140fc6708fb6f101f984a5c2263be47c&oe=5814F8CB">
+					<img src="pics/logo.jpg">
 				</div>
 			</center>
 			<div class="nav-icon">
@@ -67,15 +67,7 @@
 
 	</div>
 
-	<div class="row empty">
-		<div class="row play-bar"></div>
-		<img id="play-button" ng-click="playTrack()" src="pics/play.png">
-	</div>
-
-	<div class="youtube-bg" ng-show="showYT">
-		<youtube-video class="youtube" video-url="anotherGoodOne" player="bestPlayer"></youtube-video>
-		<img id="close-button" ng-click="toggleYT()" src="pics/close.png">
-	</div>
+	<div class="row empty" style="height:70px;"></div>
 
 	<!-- Slideshow and Main Text -->
 	<div class="row">
@@ -114,17 +106,50 @@
 
 	<!-- Company's Mission -->
 	<div class="company row">
-		<div class="bg-overlay">
-			<div class="company-text">
+		<div class="company-text">
+			<div class="bg-overlay">
 				<h1>Our Mission </h1>
 				<h3>Feeding People Nutritiously</h3>
 				<h3>Empowering People Respectfully</h3>
 				<p>We maintain professionalism in everything we do, continue to grow and expand to meet the demands of our customers, excel through industry leadership & trends, be competitive, surpass expectations, and develop long-lasting relationships with suppliers and customers to sustain growth.</p>
-	 		</div>
+			</div>
+	 	</div>
+	</div>
+
+	<!-- Youtube Video Empty Row -->
+	<div class="row videomap">
+		<div class="bg-overlay row" style="background-color:#020E1E;color:white; opacity:0.8;">
+			<img style="height:300px;width:300px; margin-top:50px; position:absolute; left:20%;" src="pics/fruity-logo.jpg">
+		</div>
+		<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+			<img id="play-button" ng-click="playTrack()" src="pics/play.png">
+			<div style="margin-top:600px;">
+				<div>To learn more about OUR TEAM.</div>
+				<img src="pics/scroll.png">
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+			<div class="row map" id="map" style="height:400px;"></div>
+			<div class="row" style="height:400px;background-color:black;color:white;">
+				<ul style="list-style:none;">
+					<li ng-repeat="review in reviews track by $index">
+						<h6>{{review.review_text}}</h6>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
+	<div class="youtube-bg" ng-show="showYT">
+		<youtube-video class="youtube" video-url="anotherGoodOne" player="bestPlayer"></youtube-video>
+		<img id="close-button" ng-click="toggleYT()" src="pics/close.png">
+	</div>
+
 	<!-- Crew and Member Information -->
+
+	<div class="row crew-head">
+		<h2>Our Team</h2>
+	</div>
 
 	<div class="row empty">
 		<div class="midrow"></div>
@@ -163,13 +188,8 @@
 		</div>
 	</div>
 
-	<!-- Youtube Video -->
-<!-- 	<div class="row video">
-		<youtube-video class="youtube" video-url="anotherGoodOne" player="bestPlayer"></youtube-video>
-	</div> -->
-
 	<!-- Menus and Services -->
-	<div class="row crew-head">
+	<div class="row crew-head" style="height:80px;">
 		<h2>What we offer</h2>
 	</div>
 	<div class="services row">
@@ -211,8 +231,9 @@
 		</div>
 	</div>
 
-	<!-- The Instagram Photo Gallery -->
-<!-- 	<div class="row gallery">
+	<!-- Gallery of Instagram News Feed --> 
+			
+	<div class="row gallery">
 		<div class="row gallery-pic">
 			<ul style="list-style:none;">
 				<li ng-repeat="pic in picArray track by $index">
@@ -226,31 +247,6 @@
 					</div>
 				</li>
 			</ul>
-		</div>
-	</div> -->
-
-	<!-- Map API and Facebook Review --> 
-	<div class="row apis">
-		<div class="map col-lg-6 col-md-6 col-sm-6 col-xs-12" id="map"></div>
-		<div class="fb col-lg-6 col-md-6 col-sm-6 col-xs-12">
-			
-			<div class="row gallery">
-				<div class="row gallery-pic">
-					<ul style="list-style:none;">
-						<li ng-repeat="pic in picArray track by $index">
-							<div class="pic2 col-lg-2 col-md-2 col-sm-2 col-xs-1">
-								<img src="{{pic.images.standard_resolution.url}}">
-								<div class="pic2-stats">
-									<span class="glyphicon glyphicon glyphicon-heart-empty" aria-hidden="true"><span style="font-family:'Lobster'" >{{pic.likes.count}}</span></span>
-									<span class="glyphicon glyphicon glyphicon-comment" aria-hidden="true"><span style="font-family:'Lobster'" >{{pic.comments.count}}</span></span>
-									<p>{{pic.caption.text}}</p>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-
 		</div>
 	</div>
 

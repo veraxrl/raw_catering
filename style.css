@@ -13,14 +13,21 @@ body {
 }
 .empty {
 	position: relative;
-	height: 750px;
+	height: 700px;
 	color: white;
 	font-family: 'Lobster', cursive;
 }
+.videomap {
+	position: relative;
+	height: 800px;
+	background:url("pics/mission.jpg");
+	background-size: 100% auto;
+	color: white;
+}
 .play-bar {
 	position: absolute;
-	top: 35%;
-	bottom: 35%;
+	top: 50%;
+	bottom: 20%;
 	right: 0;
 	left: 0;
 	background-color: black;
@@ -30,7 +37,8 @@ body {
 	height: 70px;
 	width: 70px;
 	position: absolute;
-	top: 45%;
+	top:380px;
+	left:45%;
 }
 #close-button {
 	position: absolute;
@@ -43,10 +51,10 @@ body {
 	position: absolute;
 	z-index: 1000;
 	background-color: rgba(0,0,0,0.8);
-	top: 0;
+	top: 865px;
 	right: 0;
 	left: 0;
-	bottom: 0;
+	height: 805px;
 }
 .youtube {
 	margin-top: 100px;	
@@ -150,6 +158,8 @@ body {
 	width: 100%;
 	height: 400px;
 	z-index: -1;
+	background-color: black;
+	padding: 10px 70px;
 }
 .slides-col {
 	position: relative;
@@ -183,7 +193,7 @@ body {
 }
 .company {
 	position: relative;
-	background-image: url("pics/mission2.jpg");
+	background-image: url("pics/mission3.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 	height:400px;
@@ -213,8 +223,8 @@ body {
 	font-family: 'Lobster', cursive;
 }
 .thumb {
-	height: 200px;
-	width: 200px;
+	height: 180px;
+	width: 180px;
 }
 .member {
 	margin:40px 0;
@@ -363,9 +373,6 @@ body {
 .isVisible {
 	transform: translate(0px,0);
 	transition: all .3s;
-}
-.pop-control {
-	z-index: 10;
 }
 
 /*APIs:*/

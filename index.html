@@ -20,12 +20,34 @@
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+    <script src="//connect.facebook.net/en_US/all.js"></script>
     
     <link rel="stylesheet" href="/style.css">
     <title>Raw Catering Website</title>
   </head>
 
   <body ng-app="rawApp">
+
+    <!-- Facebook API -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1775390709409158',
+          xfbml      : true,
+          version    : 'v2.7'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+
+    </script>
 
     <div class="container-fluid" ng-view></div>
 
