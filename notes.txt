@@ -1,7 +1,5 @@
 1. Autoplay on Videos 
 
-2. Get the FB API
-
 3. Add animations 
 
 4. Review mobile responsiveness

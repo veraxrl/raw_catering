@@ -136,7 +136,7 @@ app.controller('mainCtrl', function($scope, $http, $firebaseArray, $firebaseObje
     } 
     else if (!mq.matches && !mq2.matches && !mq3.matches && mq4.matches && mq5.matches) {
         console.log("850-1050")
-        $scope.instaNum=8;
+        $scope.instaNum=10;
     }
     else if (!mq.matches && !mq2.matches && !mq3.matches && !mq4.matches && mq5.matches) {
         console.log("<850")
@@ -161,6 +161,7 @@ app.controller('mainCtrl', function($scope, $http, $firebaseArray, $firebaseObje
             }
         }).then(function(response) {
           $scope.picArray = response.data.data.slice(0,$scope.instaNum);
+          console.log("Instagram pic number is "+$scope.instaNum);
           // console.log(response);
           // now analyze the sentiments and do some other analysis
           // on your images
@@ -215,13 +216,15 @@ app.controller('mainCtrl', function($scope, $http, $firebaseArray, $firebaseObje
 
     // Facebook API call to get information
     if (typeof(FB) != 'undefined' && FB != null ) {
-        FB.api('me?fields=ratings', 'get', { access_token: 'EAACEdEose0cBAOYNSzx5jRvABjH2nOIrfLkC8Wou46ZCQWe4ZAoXZCzzczbnwOgMk8ISHHc8iyJYkSLEBZA4t5cFir7H0et2LVlsZBaeZBwtHBhfIT2WFwCnDfawCXoETI3V6ZCXANlyZChCZC1ajH1yVRUnRphNvdrY7jlhqZCGU89AZDZD' }, function(response) {
+        FB.api('me?fields=ratings', 'get', { access_token: 'EAACEdEose0cBAEZBx3Y6t4ow5lMmWGF6JitZCmVzJldXNedeYggyFWvZCJzdbdiWuuNTnJZCaZCKMqfpuIBxVnSFJIt9hCaayBwjPM2ZBkLvhYmTcjsns7rKn2ZCXeO9px1qZAziCjEuqJxHQZCs5EKn2IlwdcNGDRIiixdE9rxOaljq3pZAlXIfKZC' }, function(response) {
           console.log(response);
-          $scope.reviews= response.ratings.data;
+          $scope.reviews= response.ratings.data.slice(0,5);
         });
     } else {
         console.log("FB is not defined dummy");
     }
+
+    //https://graph.facebook.com/v2.2/oauth/access_token?grant_type=fb_exchange_token&client_id={1775390709409158}&client_secret={b04fbaa611e7e1b3e98846527e2accbd}&fb_exchange_token={EAACEdEose0cBAJuLlNEKGrNgdZAaxyQQ6T2FYpW2GpH9pZAXOVXe7NlrfcoICASJ6XZCBjlA5nvUEKvAdEQaZC0qlZAQEZAQJWDghNZAX45QpoowQBgm6vIK3lioSHPLDMBlvjcZBHT8f2GImzAixcbWa7dvgXTUYRlBc3EIHMceXgZDZD}
 
 });
 

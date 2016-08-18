@@ -13,7 +13,7 @@
 		</div>
 
 		<!-- Header with Main Logo -->
-<!-- 		<div class="row logo-col">
+		<div class="row logo-col">
 			<div class="bg-overlay"></div>
 			<center>
 				<div class="row logo">
@@ -29,7 +29,7 @@
 					<li>Contact</li>
 				</ul>
 			</div>
-		</div> -->
+		</div>
 
 		<!-- Navigation Bar -->
 		<div class="row nav-bar">
@@ -67,7 +67,7 @@
 
 	</div>
 
-	<div class="row empty" style="height:70px;"></div>
+	<div class="row empty" style="height:230px;"></div>
 
 	<!-- Slideshow and Main Text -->
 	<div class="row">
@@ -119,23 +119,31 @@
 	<!-- Youtube Video Empty Row -->
 	<div class="row videomap">
 		<div class="bg-overlay row" style="background-color:#020E1E;color:white; opacity:0.8;">
-			<img style="height:300px;width:300px; margin-top:50px; position:absolute; left:20%;" src="pics/fruity-logo.jpg">
+			<img style="height:300px;width:300px; margin-top:50px; position:absolute; left:12%;" src="pics/fruity-logo.jpg">
 		</div>
-		<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 			<img id="play-button" ng-click="playTrack()" src="pics/play.png">
 			<div style="margin-top:600px;">
 				<div>To learn more about OUR TEAM.</div>
 				<img src="pics/scroll.png">
 			</div>
 		</div>
-		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-			<div class="row map" id="map" style="height:400px;"></div>
-			<div class="row" style="height:400px;background-color:black;color:white;">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<div class="row map" id="map" style="height:300px;"></div>
+			<div class="row fb" style="height:500px;">
 				<ul style="list-style:none;">
-					<li ng-repeat="review in reviews track by $index">
-						<h6>{{review.review_text}}</h6>
+					<li ng-repeat="review in reviews track by $index" style="margin-left:-40px;">
+						<div style="text-align:left;font-size:15px;margin:10px 0 10px 20px;font-weight:bold;">
+							<img class="review-icon" src="pics/fb.jpg">
+							<span>{{review.reviewer.name}} reviewed Raw Catering Co.</span> 
+							<span style="font-size:10px;">{{review.created_time.substring(0,10)}}</span>
+							<img class="review-icon" src="pics/star.gif">
+							{{review.rating}}
+						</div>
+						<div style="text-align:left;margin:0 10px;">{{review.review_text}}</div>
 					</li>
 				</ul>
+				<div style="font-weight:bold;font-size:20px; margin-top:-8px;">...</div>
 			</div>
 		</div>
 	</div>
@@ -235,9 +243,9 @@
 			
 	<div class="row gallery">
 		<div class="row gallery-pic">
-			<ul style="list-style:none;">
+			<ul style="list-style:none;margin-left:-30px;">
 				<li ng-repeat="pic in picArray track by $index">
-					<div class="pic2 col-lg-2 col-md-2 col-sm-2 col-xs-1">
+					<div class="pic2" style="float:left;">
 						<img src="{{pic.images.standard_resolution.url}}">
 						<div class="pic2-stats">
 							<span class="glyphicon glyphicon glyphicon-heart-empty" aria-hidden="true"><span style="font-family:'Lobster'" >{{pic.likes.count}}</span></span>
