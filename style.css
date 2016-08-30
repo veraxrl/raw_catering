@@ -13,6 +13,12 @@ body {
 }
 .empty {
 	position: relative;
+	height: 230px;
+	color: white;
+	font-family: 'Lobster', cursive;
+}
+.empty2 {
+	position: relative;
 	height: 700px;
 	color: white;
 	font-family: 'Lobster', cursive;
@@ -102,6 +108,7 @@ body {
 }
 #right {
 	float:right;
+	margin-right: 40px;
 }
 .logo-col {
 	background-image: url("pics/header3.jpg");
@@ -281,7 +288,7 @@ body {
 .service-btn {
 	float:left;
 	width: 200px;
-	margin:150px 60px 150px 60px;
+	margin:300px 60px 150px 60px;
 	height: 100px;
 	padding: 13px 10px;
     font-weight: 400;
@@ -385,6 +392,7 @@ body {
 	background:url("pics/white.jpg");
 	font-family: inherit;
 	position: relative;
+	height: 500px;
 }
 .review-icon {
 	height:20px;
@@ -407,6 +415,19 @@ body {
 .foot .bg-overlay img {
 	width: 400px;
 	margin:100px auto;
+}
+#fruity-logo {
+	height:300px;
+	width:300px; 
+	margin-top:50px; 
+	position:absolute; 
+	left:12%;
+}
+#team-scroll {
+	margin-top: 600px;
+}
+#map {
+	height: 300px;
 }
 
 /*Media Query:*/ 
@@ -516,5 +537,115 @@ body {
 	}
 	.nav-bar {
 		height: 40px;
+	}
+}
+/*Mobile*/
+@media (max-width: 400px) {
+	.empty {
+		height: 0px;
+	}
+	.fixed-top {
+		position: static;
+	}
+	.mySlides {
+		height: 200px;
+	}
+	.slides-col {
+		height: 200px;
+	}
+	.text-col h1 {
+		font-size:20px;
+		margin:5px 0;
+	}
+	.text-col h4 {
+		font-size:13px;
+		margin:5px 0;
+	}
+	.text-col {
+		height: 250px;
+	}
+	.social-bar {
+		margin-top: 20px;
+	}
+	.social-bar img{
+		height: 25px;
+		width: 25px;
+	}
+	.company {
+		height: 200px;
+	}
+	.company h1 {
+		font-size:20px;
+	}
+	#fruity-logo {
+		height: 180px;
+		width: 180px;
+		margin-top: 30px;
+		left:25%;
+	}
+	#play-button {
+		height: 40px;
+		width: 40px;
+		top: 235px;
+	}
+	#team-scroll {
+		margin-top: 300px;
+	}
+	#map {
+		display: none;
+	}
+	.fb {
+		height: 750px;
+	}
+	.team {
+		background: url("http://hdwalltop.com/wp-content/uploads/2015/02/black-background-design-wallpaper1.jpg");
+		right: 0;
+		left: 0;
+	}
+	.midrow {
+		display: none;
+	}
+	.empty2 {
+		position: relative;
+		height: 900px;
+	}
+	.videomap {
+		height: 1125px;
+	}
+	.thumb {
+		height: 120px;
+		width: 120px;
+	}
+	.member {
+		margin:15px 0;
+	}
+	.crew-head {
+		border: 2px solid white;
+	}
+	.services {
+		height: 200px;
+	}
+	.service-btn {
+		margin:5px;
+		height: 10px;
+	}
+	.pic2 {
+		width: 100px;
+		height: 100px;
+	}
+	.pic2 img {
+		width: 100px;
+		height: 100px;
+	}
+	.foot {
+		height: 175px;
+		margin-bottom: 0px;
+	}
+	.foot .bg-overlay img {
+		width: 280px;
+		margin:10px auto;
+	}
+	.fixed-bg {
+		display: none;
 	}
 }

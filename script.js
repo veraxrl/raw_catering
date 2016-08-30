@@ -54,6 +54,7 @@ app.controller('mainCtrl', function($scope, $http, $firebaseArray, $firebaseObje
 
     var mission = document.getElementById("to-mission");
     var team = document.getElementById("to-team");
+    var team2 = document.getElementById("to-team2"); 
     var gallery = document.getElementById("to-gallery");
     var service = document.getElementById("to-service");
     var slide1 = document.getElementById("slide1-btn");
@@ -69,14 +70,17 @@ app.controller('mainCtrl', function($scope, $http, $firebaseArray, $firebaseObje
     
     mission.onclick = function() {
         console.log("mission");
-        document.body.scrollTop=650;
+        document.body.scrollTop=400;
     }
     team.onclick = function() {
         console.log("team");
-        document.body.scrollTop=1100;
+        document.body.scrollTop=1620;
+    }
+    team2.onclick = function() {
+        document.body.scrollTop=1620;
     }
     gallery.onclick = function() {
-        document.body.scrollTop=2000;
+        document.body.scrollTop=3100;
     }
     service.onclick = function() {
         document.body.scrollTop=1420;
@@ -122,29 +126,34 @@ app.controller('mainCtrl', function($scope, $http, $firebaseArray, $firebaseObje
     var mq3 = window.matchMedia( "(min-width: 1050px)" );
     var mq4 = window.matchMedia( "(min-width: 850px)" ); 
     var mq5 = window.matchMedia( "(min-width: 650px)" ); 
-    if (mq.matches && mq2.matches && mq3.matches && mq4.matches && mq5.matches) {
+    var mq6 = window.matchMedia( "(min-width: 400px)" ); 
+    if (mq.matches && mq2.matches && mq3.matches && mq4.matches && mq5.matches && mq6.matches) {
         console.log("larger than 1400");
         $scope.instaNum=14;
     } 
-    else if (!mq.matches && mq2.matches && mq3.matches && mq4.matches && mq5.matches) {
+    else if (!mq.matches && mq2.matches && mq3.matches && mq4.matches && mq5.matches && mq6.matche) {
         console.log("1250-1400");
         $scope.instaNum=12;
     }
-    else if (!mq.matches && !mq2.matches && mq3.matches && mq4.matches && mq5.matches) {
+    else if (!mq.matches && !mq2.matches && mq3.matches && mq4.matches && mq5.matches && mq6.matche) {
         console.log("1050-1250");
         $scope.instaNum=10;
     } 
-    else if (!mq.matches && !mq2.matches && !mq3.matches && mq4.matches && mq5.matches) {
+    else if (!mq.matches && !mq2.matches && !mq3.matches && mq4.matches && mq5.matches && mq6.matche) {
         console.log("850-1050")
         $scope.instaNum=10;
     }
-    else if (!mq.matches && !mq2.matches && !mq3.matches && !mq4.matches && mq5.matches) {
+    else if (!mq.matches && !mq2.matches && !mq3.matches && !mq4.matches && mq5.matches && mq6.matche) {
         console.log("<850")
         $scope.instaNum=6;
     }
-    else if (!mq.matches && !mq2.matches && !mq3.matches && !mq4.matches && !mq5.matches) {
+    else if (!mq.matches && !mq2.matches && !mq3.matches && !mq4.matches && !mq5.matches && mq6.matche) {
         console.log("<650")
         $scope.instaNum=4;
+    }
+    else if (!mq.matches && !mq2.matches && !mq3.matches && !mq4.matches && !mq5.matches && !mq6.matche) {
+        console.log("<400")
+        $scope.instaNum=6;
     }
 
 
@@ -216,7 +225,7 @@ app.controller('mainCtrl', function($scope, $http, $firebaseArray, $firebaseObje
 
     // Facebook API call to get information
     if (typeof(FB) != 'undefined' && FB != null ) {
-        FB.api('me?fields=ratings', 'get', { access_token: 'EAACEdEose0cBAEZBx3Y6t4ow5lMmWGF6JitZCmVzJldXNedeYggyFWvZCJzdbdiWuuNTnJZCaZCKMqfpuIBxVnSFJIt9hCaayBwjPM2ZBkLvhYmTcjsns7rKn2ZCXeO9px1qZAziCjEuqJxHQZCs5EKn2IlwdcNGDRIiixdE9rxOaljq3pZAlXIfKZC' }, function(response) {
+        FB.api('me?fields=ratings', 'get', { access_token: 'EAACEdEose0cBAEGn8wjd8kawNAzr4u20rxd0XGO1y02OlyeU7YOTMdF8Rz2vHVa1nWNe2dbvjLftOuoK8ZBaPIdzZBENYwnYd7U8BhZBG9xyWbXJkZAslH7KIApZC8fzCXYzSO3r9hQ3R7mP9kiga8EZC1fsmTx2rAdNkPvsBR3nClvMlG0T18' }, function(response) {
           console.log(response);
           $scope.reviews= response.ratings.data.slice(0,5);
         });

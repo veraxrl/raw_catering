@@ -3,9 +3,9 @@
 	<div class="fixed-top">
 		<!-- Address and Contact Information -->
 		<div class="row top">
-			<div class="glyphicon glyphicon-earphone left" aria-hidden="true"></div>
-			<div class="left">Trent Devine: 072 080 1189</div>
-			<div class="left">Tyrone Kidney: 083 482 7642 </div>
+			<div class="glyphicon glyphicon-earphone" style="margin-left:20px;" aria-hidden="true"></div>
+			<div>Trent Devine: 072 080 1189</div>
+			<div>Tyrone Kidney: 083 482 7642 </div>
 			<div id="right">Address: Unit 003 Portwood Ridge, Dock Road, V&A Waterfront.</div>
 		</div>
 		<div class="row top invisible-address">
@@ -55,7 +55,7 @@
 			    <span class="caret"></span>
 			  </div>
 			  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-			    <li><a href="#/services/menus">Menus</a></li>
+			    <li><a href="#/">Menus</a></li>
 			    <li><a href="#/" id="to-service">What we offer</a></li>
 			    <li><a href="#/services/clients">Clients</a></li>
 			  </ul>
@@ -67,16 +67,19 @@
 
 	</div>
 
-	<div class="row empty" style="height:230px;"></div>
+	<div class="row empty"></div>
 
 	<!-- Slideshow and Main Text -->
 	<div class="row">
 		<div class="slides-col col-lg-6 col-md-6 col-sm-6 col-xs-12">
-			<img class="mySlides" src="https://static.wixstatic.com/media/cf177a_2d44ce2f652e425c85e29ead4314052c.jpg/v1/fill/w_743,h_743,al_c,q_90,usm_0.66_1.00_0.01/cf177a_2d44ce2f652e425c85e29ead4314052c.jpg">
-			<img class="mySlides" src="https://static.wixstatic.com/media/cf177a_0bb30afbed0d41a9a616a63da342f9c7.jpg/v1/fill/w_743,h_743,al_c,q_90,usm_0.66_1.00_0.01/cf177a_0bb30afbed0d41a9a616a63da342f9c7.jpg">
-			<img class="mySlides" src="https://static.wixstatic.com/media/cf177a_78d0da3a23fd47279cea1c6a2be0bd2b.jpg/v1/fill/w_800,h_600,al_c,q_90/cf177a_78d0da3a23fd47279cea1c6a2be0bd2b.jpg">
-			<img class="mySlides" src="https://static.wixstatic.com/media/cf177a_5474b0c5184c4e568a31576cdbde8c85.jpg/v1/fill/w_557,h_743,al_c,q_90,usm_0.66_1.00_0.01/cf177a_5474b0c5184c4e568a31576cdbde8c85.jpg">
 
+			<img class="mySlides" src="pics/slide6.jpg">
+			<img class="mySlides" src="pics/slide7.jpg">
+			<img class="mySlides" src="pics/slide8.jpg">
+			<img class="mySlides" src="pics/slide9.jpg">
+			<img class="mySlides" src="pics/slide10.jpg">
+			<img class="mySlides" src="pics/slide11.jpg">
+			<img class="mySlides" src="pics/slide12.jpg">
 			<img class="mySlides" src="pics/slide1.jpg">
 			<img class="mySlides" src="pics/slide2.jpg">
 			<img class="mySlides" src="pics/slide3.jpg">
@@ -116,21 +119,22 @@
 	 	</div>
 	</div>
 
+
 	<!-- Youtube Video Empty Row -->
 	<div class="row videomap">
 		<div class="bg-overlay row" style="background-color:#020E1E;color:white; opacity:0.8;">
-			<img style="height:300px;width:300px; margin-top:50px; position:absolute; left:12%;" src="pics/fruity-logo.jpg">
+			<img id="fruity-logo" src="pics/fruity-logo.jpg">
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 			<img id="play-button" ng-click="playTrack()" src="pics/play.png">
-			<div style="margin-top:600px;">
+			<div id="team-scroll">
 				<div>To learn more about OUR TEAM.</div>
-				<img src="pics/scroll.png">
+				<img id="to-team2" src="pics/scroll.png">
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-			<div class="row map" id="map" style="height:300px;"></div>
-			<div class="row fb" style="height:500px;">
+			<div class="row map" id="map"></div>
+			<div class="row fb">
 				<ul style="list-style:none;">
 					<li ng-repeat="review in reviews track by $index" style="margin-left:-40px;">
 						<div style="text-align:left;font-size:15px;margin:10px 0 10px 20px;font-weight:bold;">
@@ -159,34 +163,34 @@
 		<h2>Our Team</h2>
 	</div>
 
-	<div class="row empty">
+	<div class="row empty2">
 		<div class="midrow"></div>
 		<div class="team">
 			<div class="row member">
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 					<img src="pics/trenton.jpg" class="img-circle thumb">
 				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 					<h4>Trenton Devine</h4>
 					<p>Managing Director at Raw Catering Co.</p>
 					<p>4 years experience on Super Yachts, catering forsome of the world’s elite, Trent brings both professionalism and finesse, to his catering and management experience</p>
 				</div>
 			</div>
 			<div class="row member">
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 					<img src="pics/tyrone.jpg" class="img-circle thumb">
 				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 					<h4>Tyrone Kidney</h4>
 					<p>Director at Raw Catering Co.</p>
 					<p>With over 7 years experienc e in the hosptality industry Tyrone's commitment is not only to deliver the highest service but to exceed the guest expectations.</p>
 				</div>
 			</div>
 			<div class="row member">
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 					<img src="pics/staff.jpg" class="img-circle thumb">
 				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 					<h4>Our Staff</h4>
 					<p>Megan Smith - Head Chef</p>
 					<p>Nonqaba Bikauri (Bianca) - Senior Chef / Pastry Specialist</p>
