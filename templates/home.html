@@ -1,11 +1,9 @@
-	<div class="fixed-bg"></div>
-
 	<div class="fixed-top">
 		<!-- Address and Contact Information -->
 		<div class="row top">
 			<div class="glyphicon glyphicon-earphone" style="margin-left:20px;" aria-hidden="true"></div>
-			<div>Trent Devine: 072 080 1189</div>
-			<div>Tyrone Kidney: 083 482 7642 </div>
+			<div>Trent Devine: 072 080 1189, trent@rawcateringco.com</div>
+			<div>Tyrone Kidney: 083 482 7642, tyrone@rawcateringco.com</div>
 			<div id="right">Address: Unit 003 Portwood Ridge, Dock Road, V&A Waterfront.</div>
 		</div>
 		<div class="row top invisible-address">
@@ -84,7 +82,6 @@
 			<img class="mySlides" src="pics/slide2.jpg">
 			<img class="mySlides" src="pics/slide3.jpg">
 			<img class="mySlides" src="pics/slide4.jpg">
-			<img class="mySlides" src="pics/slide5.jpg">
 			
 			<span class="glyphicon glyphicon-chevron-left slide-left" ng-click="plusDivs(-1)" aria-hidden="true"></span>
 			<span class="glyphicon glyphicon-chevron-right slide-right" ng-click="plusDivs(+1)" aria-hidden="true"></span>
@@ -125,37 +122,63 @@
 		<div class="bg-overlay row" style="background-color:#020E1E;color:white; opacity:0.8;">
 			<img id="fruity-logo" src="pics/fruity-logo.jpg">
 		</div>
-		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+		<div class="row" style="position:relative;">
 			<img id="play-button" ng-click="playTrack()" src="pics/play.png">
 			<div id="team-scroll">
 				<div>To learn more about OUR TEAM.</div>
 				<img id="to-team2" src="pics/scroll.png">
 			</div>
 		</div>
-		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-			<div class="row map" id="map"></div>
-			<div class="row fb">
-				<ul style="list-style:none;">
-					<li ng-repeat="review in reviews track by $index" style="margin-left:-40px;">
-						<div style="text-align:left;font-size:15px;margin:10px 0 10px 20px;font-weight:bold;">
-							<img class="review-icon" src="pics/fb.jpg">
-							<span>{{review.reviewer.name}} reviewed Raw Catering Co.</span> 
-							<span style="font-size:10px;">{{review.created_time.substring(0,10)}}</span>
-							<img class="review-icon" src="pics/star.gif">
-							{{review.rating}}
-						</div>
-						<div style="text-align:left;margin:0 10px;">{{review.review_text}}</div>
-					</li>
-				</ul>
-				<div style="font-weight:bold;font-size:20px; margin-top:-8px;">...</div>
-			</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 map" id="map"></div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 inquiry">
+			<h4 style="margin-top:20px;">Inquiry Request</h4>
+			<form class="form-horizontal">
+				<div class="form-group">
+					<label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+					<div class="col-sm-9">
+						<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="inputPassword3" class="col-sm-3 control-label">Contact</label>
+					<div class="col-sm-9">
+						<input type="password" class="form-control" id="inputPassword3" placeholder="Name/Company">
+					</div>
+				</div>
+				<textarea class="form-control" rows="5" style="margin:30px 0;">
+				</textarea>
+				<div class="form-group">
+					<div class="row">
+						<button type="submit" class="btn btn-default">Send Request</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 fb">
+			<ul style="list-style:none;">
+				<li ng-repeat="review in reviews track by $index" style="margin-left:-40px;">
+					<div style="text-align:left;font-size:15px;margin:10px 0 10px 20px;font-weight:bold;">
+						<img class="review-icon" src="pics/fb.jpg">
+						<span>{{review.reviewer.name}} reviewed Raw Catering Co.</span> 
+						<span style="font-size:10px;">{{review.created_time.substring(0,10)}}</span>
+						<img class="review-icon" src="pics/star.gif">
+						{{review.rating}}
+					</div>
+					<div style="text-align:left;margin:0 10px;">{{review.review_text}}</div>
+				</li>
+			</ul>
+			<div style="font-weight:bold;font-size:20px; margin-top:-8px;">...</div>
 		</div>
 	</div>
 
-	<div class="youtube-bg" ng-show="showYT">
+<!-- 	<div class="youtube-bg" ng-show="showYT">
 		<youtube-video class="youtube" video-url="anotherGoodOne" player="bestPlayer"></youtube-video>
 		<img id="close-button" ng-click="toggleYT()" src="pics/close.png">
-	</div>
+	</div> -->
 
 	<!-- Crew and Member Information -->
 

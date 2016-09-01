@@ -225,7 +225,7 @@ app.controller('mainCtrl', function($scope, $http, $firebaseArray, $firebaseObje
 
     // Facebook API call to get information
     if (typeof(FB) != 'undefined' && FB != null ) {
-        FB.api('me?fields=ratings', 'get', { access_token: 'EAACEdEose0cBAEGn8wjd8kawNAzr4u20rxd0XGO1y02OlyeU7YOTMdF8Rz2vHVa1nWNe2dbvjLftOuoK8ZBaPIdzZBENYwnYd7U8BhZBG9xyWbXJkZAslH7KIApZC8fzCXYzSO3r9hQ3R7mP9kiga8EZC1fsmTx2rAdNkPvsBR3nClvMlG0T18' }, function(response) {
+        FB.api('me?fields=ratings', 'get', { access_token: 'EAACEdEose0cBAHPkzTPvK2WlZBoS39WiKGOQwSC5jDNNkQmDK94NB31Rzlown75AmbWlwDxu6nTxuKmpdZBpzuW49xqMZBRCfSc12wLadaUDMnXY7KHPaVb3HEVXkmZChas0ojiOCN1XEZCC0gULT1o7CuhCeeRSZAdZBFIibYD9gZDZD' }, function(response) {
           console.log(response);
           $scope.reviews= response.ratings.data.slice(0,5);
         });
