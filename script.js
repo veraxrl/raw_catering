@@ -111,6 +111,46 @@ app.controller('mainCtrl', function($scope, $http, $firebaseArray, $firebaseObje
         shadow3.classList.remove('isVisible');
     }
 
+    // Facebook API call to get information into Firebase DB
+    if (typeof(FB) != 'undefined' && FB != null ) {
+        FB.api('me?fields=ratings', 'get', { access_token: 'EAACEdEose0cBALh0OXdceOM8FHyhUtuTGnEXv4je17tSA5CkhzOkdUjDuPjpA3N4Ecz0AwisIzmcwPaNZBhPlEuLgbPuv0sDuEzZCPwAfdQraeIZAf3YN7vSZCZAKh9wnZC64kXY0q1lqKDfWqEbFZAd0sRMXehBqQEP4ZByrdHLSwZDZD' }, function(response) {
+          $scope.reviews= response.ratings.data;
+          // Update all reviews to Firebase
+          // for (i=0;i<$scope.reviews.length;i++) {
+          //   $scope.addFBreview(i,$scope.reviews[i]);
+          // }
+      });
+    } else {
+        console.log("FB is not defined dummy");
+    }
+
+    $scope.reviews2 = [];
+
+    //Extract FB review from Firebase
+    $scope.extractFBreview = function(id) {
+        var ref = firebase.database().ref().child("fb").child(id).child("Review");
+        $scope.temp = $firebaseObject(ref);
+        $scope.reviews2.push($scope.temp);
+    };
+
+    //Function to update FB reviews from Facebook API
+    $scope.addFBreview = function(id,review) {
+        var ref = firebase.database().ref().child("fb").child(id);
+        $scope.reviewDB = $firebaseObject(ref);     
+        $scope.reviewDB.ID= id;
+        $scope.reviewDB.Review= review;
+        $scope.reviewDB.$save().then(function(ref) {
+            ref.key === id;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+
+    for (i=0;i<8;i++) {
+        $scope.extractFBreview(i);
+    }
+    console.log($scope.reviews2);
+
     //Instagram feed: 
       $scope.hasToken = true;
         var token = window.location.hash;
@@ -158,7 +198,7 @@ app.controller('mainCtrl', function($scope, $http, $firebaseArray, $firebaseObje
 
 
 
-      $scope.getInstaPics = function() {
+    $scope.getInstaPics = function() {
           var path = "/users/self/media/recent";
           var mediaUrl = INSTA_API_BASE_URL + path;
           $http({
@@ -171,10 +211,6 @@ app.controller('mainCtrl', function($scope, $http, $firebaseArray, $firebaseObje
         }).then(function(response) {
           $scope.picArray = response.data.data.slice(0,$scope.instaNum);
           console.log("Instagram pic number is "+$scope.instaNum);
-          // console.log(response);
-          // now analyze the sentiments and do some other analysis
-          // on your images
-
       })
     };
 
@@ -222,16 +258,6 @@ app.controller('mainCtrl', function($scope, $http, $firebaseArray, $firebaseObje
 
     // var theUrl='https://graph.facebook.com/v2.2/oauth/access_token?grant_type=fb_exchange_token&client_id={1775390709409158}&client_secret={b04fbaa611e7e1b3e98846527e2accbd}&fb_exchange_token={EAACEdEose0cBAJuLlNEKGrNgdZAaxyQQ6T2FYpW2GpH9pZAXOVXe7NlrfcoICASJ6XZCBjlA5nvUEKvAdEQaZC0qlZAQEZAQJWDghNZAX45QpoowQBgm6vIK3lioSHPLDMBlvjcZBHT8f2GImzAixcbWa7dvgXTUYRlBc3EIHMceXgZDZD}';
     // $scope.httpGetAsync(theUrl,"http://localhost:8000/#/");
-
-    // Facebook API call to get information
-    if (typeof(FB) != 'undefined' && FB != null ) {
-        FB.api('me?fields=ratings', 'get', { access_token: 'EAACEdEose0cBAHPkzTPvK2WlZBoS39WiKGOQwSC5jDNNkQmDK94NB31Rzlown75AmbWlwDxu6nTxuKmpdZBpzuW49xqMZBRCfSc12wLadaUDMnXY7KHPaVb3HEVXkmZChas0ojiOCN1XEZCC0gULT1o7CuhCeeRSZAdZBFIibYD9gZDZD' }, function(response) {
-          console.log(response);
-          $scope.reviews= response.ratings.data.slice(0,5);
-        });
-    } else {
-        console.log("FB is not defined dummy");
-    }
 
     //https://graph.facebook.com/v2.2/oauth/access_token?grant_type=fb_exchange_token&client_id={1775390709409158}&client_secret={b04fbaa611e7e1b3e98846527e2accbd}&fb_exchange_token={EAACEdEose0cBAJuLlNEKGrNgdZAaxyQQ6T2FYpW2GpH9pZAXOVXe7NlrfcoICASJ6XZCBjlA5nvUEKvAdEQaZC0qlZAQEZAQJWDghNZAX45QpoowQBgm6vIK3lioSHPLDMBlvjcZBHT8f2GImzAixcbWa7dvgXTUYRlBc3EIHMceXgZDZD}
 
